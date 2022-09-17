@@ -1,8 +1,8 @@
 import React from 'react';
-import BotaoVoltar from '../../componentes/BotaoVoltar';
-import TopMenu from '../../componentes/TopMenu';
-import SideMenu from '../../componentes/SideMenu';
-import MainCards from '../../componentes/MainCards';
+import BotaoVoltar from '../../components/BotaoVoltar';
+import TopMenu from '../../components/TopMenu';
+import SideMenu from '../../components/SideMenu';
+import MainCards from '../../components/MainCards';
 import './style.css';
 
 const Main = () => (

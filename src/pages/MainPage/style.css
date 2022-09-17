@@ -15,13 +15,16 @@
 
 .main-body-container{
   background-color: yellow;
+  display: flex;
 }
 
 .main-body-side-menu{
   background-color: purple;
   max-width: 20%;
+  max-width: 300px;
 }
 
 .main-body-cards{
   background-color: blue;
+
 }

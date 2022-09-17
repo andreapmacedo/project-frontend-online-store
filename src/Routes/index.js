@@ -4,7 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import MainPage from "../paginas/PaginaInicial";
 // import FrontEnd from "../paginas/PaginaFrontEnd";
 // import PaginaBackEnd from "../paginas/PaginaBackEnd";
-import MainPage from "../paginas/MainPage";
+import MainPage from "../pages/MainPage";
+import CategoryPage from "../pages/categoryPage";
 
 const Rotas = () => (
   <BrowserRouter>
@@ -14,6 +15,7 @@ const Rotas = () => (
       {/* <Route path='/front-end' element={<FrontEnd/>}/> */}
       {/* <Route path='/back-end'  element={<PaginaBackEnd/>}/> */}
       <Route path='/main'  element={<MainPage/>}/>
+      <Route path='/category'  element={<CategoryPage/>}/>
     </Routes>
   </BrowserRouter>
 );
