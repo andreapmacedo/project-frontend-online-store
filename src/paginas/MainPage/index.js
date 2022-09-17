@@ -1,22 +1,23 @@
 import React from 'react';
 import BotaoVoltar from '../../componentes/BotaoVoltar';
-import MainCards from '../../componentes/MainCards';
 import TopMenu from '../../componentes/TopMenu';
 import SideMenu from '../../componentes/SideMenu';
-
-// const Teste = () => (
-//   <div>
-//     <MainCards></MainCards>
-//     <h1>Teste</h1>
-//   </div>
-// );
+import MainCards from '../../componentes/MainCards';
+import './style.css';
 
 const Main = () => (
-  <div>
-
-    <TopMenu></TopMenu>
-    <SideMenu></SideMenu>
-    <MainCards></MainCards>
+  <div className="main-page-container">
+    <div className="main-top-menu-container">
+      <TopMenu></TopMenu>
+    </div>
+    <div className="main-body-container" >
+      <div className="main-body-side-menu">
+        <SideMenu></SideMenu>
+      </div>
+      <div className="main-body-cards">
+        <MainCards></MainCards>
+      </div>
+    </div>
     <BotaoVoltar />
   </div>
 );

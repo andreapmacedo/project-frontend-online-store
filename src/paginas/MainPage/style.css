@@ -1,0 +1,27 @@
+.main-page-container{
+  /* width: 20%; */
+  /* height: 100%; */
+  background-color: red;
+  color: black;
+  padding-left: 20px;
+  padding-top: 20px;
+  /* position: fixed; */
+  /* overflow: auto; */
+}
+
+.main-top-menu-container{
+  background-color: aqua;
+}
+
+.main-body-container{
+  background-color: yellow;
+}
+
+.main-body-side-menu{
+  background-color: purple;
+  max-width: 20%;
+}
+
+.main-body-cards{
+  background-color: blue;
+}
