@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 
-const PaginaInicial = () => (
+const MainPage = () => (
   <div>
     <h1>Escolha seu caminho em JavaScript</h1>
 
@@ -14,4 +14,4 @@ const PaginaInicial = () => (
   </div>
 );
 
-export default PaginaInicial;
+export default MainPage;
