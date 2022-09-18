@@ -1,8 +1,9 @@
 import React from 'react';
+import './style.css';
 
 const TopMenu = () => (
-  <div>
-    <h1>Top Menu</h1>
+  <div className="top-menu-container" >
+    <h1>Shopping Cart</h1>
   </div>
 );
 

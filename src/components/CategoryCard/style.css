@@ -153,7 +153,8 @@
   color : #444;
   width: 200px;
   height: 160px;
-  background-color: rgb(243, 242, 242);
+  /* background-color: rgb(243, 242, 242); */
+  background-color: #fafafa;
   /* border-radius: 7px 7px 0px 0px; */
 }
 

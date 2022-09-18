@@ -2,7 +2,8 @@ import React from 'react';
 import BotaoVoltar from '../../components/BotaoVoltar';
 import TopMenu from '../../components/TopMenu';
 import SideMenu from '../../components/SideMenu';
-import MainCards from '../../components/CardsContainer';
+// import MainCards from '../../components/CardsContainer';
+import CategoriesCards from '../../components/CategoriesCards';
 import './style.css';
 
 const Main = () => (
@@ -15,7 +16,8 @@ const Main = () => (
         <SideMenu></SideMenu>
       </div>
       <div className="main-body-cards">
-        <MainCards></MainCards>
+        {/* <MainCards></MainCards> */}
+        <CategoriesCards></CategoriesCards>
       </div>
     </div>
     <BotaoVoltar />
