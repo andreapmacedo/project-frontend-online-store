@@ -30,7 +30,6 @@ export default function MainCards() {
     
   return (
     <div className="main-cards-container">
-      <h1>Listitems</h1>
       {renderitems()}
     </div>
   )

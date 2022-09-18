@@ -2,7 +2,7 @@ import React from 'react';
 import BotaoVoltar from '../../components/BotaoVoltar';
 import TopMenu from '../../components/TopMenu';
 import SideMenu from '../../components/SideMenu';
-import MainCards from '../../components/MainCards';
+import MainCards from '../../components/CardsContainer';
 import './style.css';
 
 const Main = () => (

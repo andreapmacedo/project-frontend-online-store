@@ -71,7 +71,6 @@ export default function MainCards() {
     
   return (
     <div className="side-menu-container">
-      {/* <h1>Listitems</h1> */}
       {renderItems()}
     </div>
   )
