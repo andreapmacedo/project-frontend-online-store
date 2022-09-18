@@ -46,7 +46,8 @@
 }
 
 .side-item-container + .selected .side-item-text{
-    color: green;
+    /* color: #2FC08C ; */
+    color: #444 ;
     padding-left: 10px;
 }
 
@@ -57,5 +58,5 @@
 
 .side-item-container + .selected .side-item-separator  {
     height: 1px;
-    background-color: green;
+    background-color: #2FC08C ;
 }

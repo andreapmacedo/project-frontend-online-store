@@ -31,6 +31,13 @@
   border: none;
 }
 
+.card .free-shipping-svg {
+  top: 4px;
+  left: 4px;
+  position: absolute;
+  /* position: relative; */
+}
+
 
 .card-link {
   display: flex;
@@ -119,7 +126,7 @@
 {
   opacity: 1;
   visibility: visible;
-	transform: translateY(68px);
+	transform: translateY(-118px);
   border: none;
 }
 
@@ -127,17 +134,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   padding: 15px;
   transform: translateY(10px);
   /* background-color: #2FC08C; */
   border: #2FC08C solid 1px;
-  border-bottom: #2FC08C solid 20px;
+  /* border-bottom: #2FC08C solid 20px; */
   /* background-color: #eee; */
-  color : #666;
+  color : #444;
   width: 200px;
   height: 160px;
-  background-color: #eee;
+  background-color: rgb(243, 242, 242);
   /* border-radius: 7px 7px 0px 0px; */
 }
 
@@ -147,6 +154,16 @@
   overflow: hidden;
 }
 
+/* .card .info-content .free-shipping {
+  position: absolute;
+  width: 100%;
+  font-size: 1.1em;
+  max-height: 210px;
+  background-color: white;
+  bottom: 0px;
+  border-top: #2FC08C solid 1px;
+} */
+
 .card .info-content .shipping {
   color: red;
   border-radius: 2px;
@@ -154,7 +171,7 @@
   font-weight: 100;
   width: 100%;
   text-align: center;
-  /* bottom: 5px; */
+  
 }
 
 .card .btnAdd {
