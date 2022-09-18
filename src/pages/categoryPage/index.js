@@ -2,7 +2,7 @@ import React from 'react';
 import BotaoVoltar from '../../components/BotaoVoltar';
 import TopMenu from '../../components/TopMenu';
 import SideMenu from '../../components/SideMenu';
-import CategoryCards from '../../components/CategoryCards';
+import CategoriesCards from '../../components/CategoriesCards';
 import './style.css';
 
 const CategoryPage = () => (
@@ -15,7 +15,7 @@ const CategoryPage = () => (
         <SideMenu></SideMenu>
       </div>
       <div className="main-body-cards">
-        <CategoryCards></CategoryCards>
+        <CategoriesCards></CategoriesCards>
       </div>
     </div>
     <BotaoVoltar />

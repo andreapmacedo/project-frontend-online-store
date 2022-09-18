@@ -32,12 +32,15 @@ export default function MainCards() {
     }
     return listitems.map((item, index) => {
       return (
-        <div key={index}
+        <div 
+        className="side-item-container"
+        key={index}
           // onClick={() => console.log(item)}
           onClick={() => loadCategoryPage(item.id)}
         >
           <h1>{item.name}</h1>
 
+        <div className="side-item-separator"></div>
         </div>
       )
     });

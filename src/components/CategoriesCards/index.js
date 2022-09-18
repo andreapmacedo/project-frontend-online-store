@@ -5,7 +5,7 @@ import MainContext from '../../Context/MainContext'
 import CategoryCard from '../CategoryCard';
 
 
-export default function CategoryCards() {
+export default function CategoriesCards() {
   const [listitems, setlistitems] = useState([]);
   const { selectedListItems } = useContext(MainContext);
   
