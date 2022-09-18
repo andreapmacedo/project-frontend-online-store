@@ -11,6 +11,7 @@ export default function MainCards() {
   // const history = useNavigate();
   const navigate = useNavigate();
   const {
+    selectedListItems,
     setSelectedListItems,
   } = useContext(MainContext);
 
@@ -26,6 +27,15 @@ export default function MainCards() {
     navigate(`/category`);
   }
 
+  function setClassName(itemId) {
+    if(selectedListItems === itemId) {
+      // return 'side-item-container-selected';
+      return 'side-item-container selected';
+    }
+    return 'side-item-container';
+  }
+
+
   function renderItems(){
     if(!listitems){
       return <p>Loading...</p>
@@ -33,14 +43,20 @@ export default function MainCards() {
     return listitems.map((item, index) => {
       return (
         <div 
-        className="side-item-container"
+        // className="side-item-container"
+        className={setClassName(item.id)}
+
         key={index}
           // onClick={() => console.log(item)}
           onClick={() => loadCategoryPage(item.id)}
         >
-          <h1>{item.name}</h1>
+          <div
+            className="side-item-text"
+          >
+            <h1>{item.name}</h1>
+          </div>
 
-        <div className="side-item-separator"></div>
+          <div className="side-item-separator"></div>
         </div>
       )
     });
