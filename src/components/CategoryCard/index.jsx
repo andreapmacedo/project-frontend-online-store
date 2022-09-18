@@ -26,14 +26,12 @@ class CategoryCard extends Component {
           />
           <div className="info-content">
             <p>{title}</p>
-            <p className="price">
-              {' '}
-              {`R$ ${price}`}
-            </p>
-            {/* <ShoppingCart size={36} color="#ddd" /> */}
-            {/* <div className="free-shipping">
-            { shipping && <p className="shipping" data-testid="free-shipping"> Frete Grátis </p> }
-            </div> */}
+            <div className="price-content">
+              <p className="price">
+                {' '}
+                {`R$ ${price.toFixed(2).replace('.', ',')}`}
+              </p>
+            </div>
           </div>
           
         </Link>

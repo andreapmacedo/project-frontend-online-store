@@ -91,9 +91,18 @@
   text-decoration: none;  
 }
 
-.price {
-  font-size: 1em;
+.price-content {
+  position: absolute;
+  width: 100%;
+  bottom: 1px;
+  left: 12px;
 }
+
+.price-content .price {
+  font-size: 1.1em;
+  font-weight: bolder;
+}
+
 
 /* .card:hover .imgBox img
 {
@@ -126,7 +135,7 @@
 {
   opacity: 1;
   visibility: visible;
-	transform: translateY(-118px);
+	transform: translateY(-122px);
   border: none;
 }
 
