@@ -3,7 +3,57 @@
   background-color: #2FC08C;
   color: #eee;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 60px;
+}
+
+.cart-icon-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
+
+.cart-length-container {
+  top : 4px;
+  right: 12px;
+  position: absolute;
+  background-color: red;
+  border: 1px solid #aaa;
+  color: #eee;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px; 
+  font-size: 6px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  height: 38px;
+  width: 366px;
+  border-radius: 5px;
+}
+
+.search-bar input {
+  background-color: #fff;
+  color: #777;
+  width: 300px;
+  height: 32px;
+  border: none;
+  border-radius: 5px;
+  padding: 0px 10px;
+  font-size: 1.1em;
+}
+
+.search-icon {
+  padding-left: 8px;
 }
