@@ -58,7 +58,11 @@ const ItemDetails = () => {
         >
           +
         </button>
-        <h3>Quantidade: {itemQuantity}</h3>
+        <input
+          type="number"
+          value={ itemQuantity }
+          onChange
+        />
       </section>
     </div>
     <BotaoVoltar />
