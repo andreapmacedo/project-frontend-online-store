@@ -20,16 +20,19 @@ const ItemDetails = () => {
   }, [id]);
 
   const add = () => {
-    setItemQuantity((prevState) => prevState + 1);
+    if (itemQuantity < item.available_quantity) {
+      setItemQuantity((prevState) => Number(prevState) + 1);
+    }
   }
 
   const remove = () => {
     if (itemQuantity > 0) {
-      setItemQuantity((prevState) => prevState - 1);
+      setItemQuantity((prevState) => Number(prevState) - 1);
     }
   }
 
   console.log(item);
+
   return (<div className="main-page-container">
     <div className="main-top-menu-container">
       <TopMenu></TopMenu>
@@ -58,11 +61,8 @@ const ItemDetails = () => {
         >
           +
         </button>
-        <input
-          type="number"
-          value={ itemQuantity }
-          onChange
-        />
+        <h4>Quantidade: { itemQuantity }</h4>
+        <h3>Total: R$ { (itemQuantity * item.price ).toFixed(2) } </h3>
       </section>
     </div>
     <BotaoVoltar />
