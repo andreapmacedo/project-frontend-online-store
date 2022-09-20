@@ -19,7 +19,7 @@
 {
 	position: relative;
 	width: 220px;
-	height: 300px;
+	height: 350px;
 	margin: 8px 8px;
 	display: flex;
 	justify-content: center;
@@ -48,20 +48,21 @@
 
 .card:hover
 {
-	z-index: 1;
+	z-index: 10;
 }
 
 .card .imgBox
 {
 	position: relative;
-	padding: 25px;
+	padding: 15px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	transition: 0.5s ease-in-out;
-  max-width: 145px;
-	max-height: 145px;
+  max-width: 100px;
+	max-height: 100px;
+
 }
 
 .card:hover .imgBox
@@ -72,8 +73,8 @@
 .card .imgBox img
 {
 	
-	max-width: 140px;
-	max-height: 140px;
+	max-width: 100px;
+	max-height: 100px;
   margin: 0px 0 20px;
 	transition: 0.5s ease-in-out;
 }
@@ -95,7 +96,6 @@
   width: 100%;
   bottom: 1px;
   left: 12px;
-  z-index: 4;
 }
 
 .price-content .price {
@@ -113,55 +113,66 @@
 	color: #fff;
 	font-weight: 600;
 } */
-.card .btn-container
+.card .content
 {
 	position: absolute;
 	bottom: 82px;
   display: flex;
+  /* justify-content: center; */
+  /* justify-content: flex-end; */
+  /* align-items: center; */
   flex-direction: column;
   transition: 0.5s ease-in-out;
   opacity: 0;
   visibility: hidden;
-  border: none; 
-  /* z-index: -1; */
+  border: none;
+  /* border: none; */
+  /* background-color: antiquewhite; */
+  
 }
 
-.card:hover .btn-container
+.card:hover .content
 {
   opacity: 1;
   visibility: visible;
-	transform: translateY(-62px);
+	transform: translateY(-122px);
   border: none;
-  /* z-index: 2; */
 }
 
 .card .info-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* justify-content: center; */
   padding: 15px;
   transform: translateY(10px);
+  /* background-color: #2FC08C; */
   border: #2FC08C solid 1px;
+  /* border-bottom: #2FC08C solid 20px; */
+  /* background-color: #eee; */
   color : #444;
   width: 200px;
-  height: 90px;
+  height: 160px;
+  /* background-color: rgb(243, 242, 242); */
   background-color: #fafafa;
-  z-index: 1;
-
+  /* border-radius: 7px 7px 0px 0px; */
 }
 
-.card .info-content .title-content {
-  max-height: 68px;
-  overflow: hidden;
+.card .info-content {
   font-size: 1.1em;
-
-  text-overflow: ellipsis;
-  /* white-space: nowrap; */
-
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  max-height: 210px;
+  overflow: hidden;
 }
+
+/* .card .info-content .free-shipping {
+  position: absolute;
+  width: 100%;
+  font-size: 1.1em;
+  max-height: 210px;
+  background-color: white;
+  bottom: 0px;
+  border-top: #2FC08C solid 1px;
+} */
 
 .card .info-content .shipping {
   color: red;
@@ -192,7 +203,7 @@
   font-size: 0.8em;
   border: #2FC08C solid 1px;
   border-radius: 20px;
-  padding: 4PX;
+  padding: 3PX;
   color: white;
   background-color: #2fc08c;
   width: 200px;
@@ -219,11 +230,11 @@
 
 @media (hover: none) and (pointer: coarse){
 
-  .card .btn-container
+  .card .content
   {
     opacity: 1;
     visibility: visible;
-    transform: translateY(-55px);
+    transform: translateY(44px);
   } /* Regular CSS rules here*/
 }
 
@@ -261,7 +272,6 @@
     border-bottom: 1px solid #2fc08c;;
     border-radius: 0 0 0 8px;
     /* border-radius: 4px; */
-    /* margin: 4px; */
     flex-grow: 1;
     text-align: center;
     font-size: 1.3em;
@@ -273,7 +283,6 @@
     cursor: pointer;
     font-size: 14px;
     padding: 2px;
-    /* margin: 4px; */
     background-color: #ddd;
     /* color:111;  */
   }

@@ -49,13 +49,16 @@ const TopMenu = () => {
 
       <div
         className="cart-icon-container"
+        onClick={() => navigate(`/cart`)}
       >
         <div
           className="cart-icon"
         >
           <ShoppingCart size={36} color="#eee" /> 
         </div>
-        <div className="cart-length-container">
+        <div
+         className="cart-length-container"
+        >
           <div className="cart-lenght-text">
             <h1>{cartItems.length}</h1>
           </div>
