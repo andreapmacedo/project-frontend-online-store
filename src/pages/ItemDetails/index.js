@@ -5,6 +5,7 @@ import TopMenu from '../../components/TopMenu';
 import SideMenu from '../../components/SideMenu';
 import './style.css';
 import { itemDetails } from '../../services/api';
+import Review from '../../components/Review/Review';
 
 const ItemDetails = () => {
   const [item, setItem] = useState({});
@@ -33,7 +34,8 @@ const ItemDetails = () => {
 
   console.log(item);
 
-  return (<div className="main-page-container">
+  return (
+  <div className="main-page-container">
     <div className="main-top-menu-container">
       <TopMenu></TopMenu>
     </div>
@@ -41,28 +43,33 @@ const ItemDetails = () => {
       <div className="main-body-side-menu">
         <SideMenu></SideMenu>
       </div>
-      <section className="main-body-cards">
-        <h1>
-          { item.title }
-        </h1>
-        <img src={ item.thumbnail } alt={ item.title } />
-        <h4>
-          Preço: R$ { item.price }
-        </h4>
-        <button
-          className="remove-button"
-          onClick={ () => remove() }
-        >
-          -
-        </button>
-        <button
-          className="add-button"
-          onClick={ () => add() }
-        >
-          +
-        </button>
-        <h4>Quantidade: { itemQuantity }</h4>
-        <h3>Total: R$ { (itemQuantity * item.price ).toFixed(2) } </h3>
+      <section className="main-body">
+        <div className="item-details">
+          <h1>
+            { item.title }
+          </h1>
+          <img src={ item.thumbnail } alt={ item.title } />
+          <h4>
+            Preço: R$ { item.price }
+          </h4>
+          <div className="btns">
+            <button
+              className="remove-button"
+              onClick={ () => remove() }
+            >
+              -
+            </button>
+            <button
+              className="add-button"
+              onClick={ () => add() }
+            >
+              +
+          </button>
+          </div>
+          <h4>Quantidade: { itemQuantity }</h4>
+          <h3>Total: R$ { (itemQuantity * item.price ).toFixed(2) } </h3>
+        </div>
+        <Review />
       </section>
     </div>
     <BotaoVoltar />
