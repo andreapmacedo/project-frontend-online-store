@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from "../pages/MainPage";
 import CategoryPage from "../pages/categoryPage";
 import SearchPage from "../pages/SearchPage/SearchPage";
+import CartPage from "../pages/CartPage/CartPage";
 
 import MainProvider from '../Provider/MainProvider';
 
@@ -21,6 +22,7 @@ const Rotas = () => (
         <Route path='/main'  element={<MainPage/>}/>
         <Route path='/category'  element={<CategoryPage/>}/>
         <Route path='/search'  element={<SearchPage/>}/>
+        <Route path='/cart'  element={<CartPage/>}/>
       </Routes>
     </BrowserRouter>
   </MainProvider>

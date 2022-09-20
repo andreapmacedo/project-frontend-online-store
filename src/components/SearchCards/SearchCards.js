@@ -48,7 +48,6 @@ export default function SearchCards() {
     async function getitems(){
       const result = await itemCategoryAndName(selectedListItems, searchItem);
       // const result = await itemName(searchItem);
-      
       setlistitems(result);
     }
     getitems();

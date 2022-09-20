@@ -11,17 +11,21 @@ export default function Cart() {
   } = useContext(MainContext);
   
   function renderItems(){
-    const { results } = listitems;
-    if(!results){
-      return <p>Loading...</p>
+    
+    // const { cartItems } = listitems;
+    console.log(cartItems);
+    
+    if(!cartItems){
+      // return <p>Loading...</p>
+      return <p>Seu carrinho está vazio</p>
     }
 
-    function sendToCart(item){
-      console.log(item);
-      setCartItem([...cartItems, item])
-    }
+    // function sendToCart(item){
+    //   console.log(item);
+    //   setCartItem([...cartItems, item])
+    // }
 
-    return results
+    return cartItems
       .map((product) => (
         <div
           key={ product.id }
@@ -31,7 +35,7 @@ export default function Cart() {
             title={ product.title }
             thumbnail={ product.thumbnail }
             price={ product.price }
-            onClick={ () => sendToCart(product) }
+            // onClick={ () => sendToCart(product) }
             shipping={ product.shipping.free_shipping }
           />
         </div>
