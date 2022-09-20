@@ -11,9 +11,9 @@ export default function Cart() {
     cartItems,
   } = useContext(MainContext);
   
-  function sendToCart (item) {
-    removeFromCart(item)
-  }
+  // function sendToCart (item) {
+  //   removeFromCart(item)
+  // }
 
 
   function renderItems(){
@@ -34,7 +34,7 @@ export default function Cart() {
               title={ product.itemProduct.title }
               thumbnail={ product.itemProduct.thumbnail }
               price={ product.itemProduct.price }
-              onClick={ () => sendToCart(product) }
+              onClick={ () => removeFromCart(product) }
               shipping={ product.itemProduct.shipping.free_shipping }
             />
           }

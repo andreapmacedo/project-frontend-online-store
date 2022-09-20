@@ -11,15 +11,19 @@ function MainProvider({ children }) {
   function addToCart(item) {
     if (cartItems.length === 0) {
       setCartItem([...cartItems, { itemAmount: 1,  itemProduct: item}])
-    }
-    else {
-      cartItems.forEach((product) => {
-        if (product.itemProduct.id === item.id){
-          setCartItem([...cartItems, { itemAmount: product.itemAmount+1,  itemProduct: item}])
-        } else {
-          setCartItem([...cartItems, { itemAmount: 1,  itemProduct: item}])
-        }
-      })
+    } const isTheProductThere = cartItems.some(({ itemProduct: { id } }) => id === item.id);      
+    if (isTheProductThere) {
+      const updateProducts = cartItems.map((cartItem) => {
+        if (cartItem.itemProduct.id === item.id) {
+          return ({
+            itemAmount: cartItem.itemAmount + 1,
+            itemProduct: item,
+          })
+        } else return cartItem;
+      });
+      setCartItem(updateProducts);
+    } else {
+      setCartItem([...cartItems, { itemAmount: 1,  itemProduct: item}])
     }
     // console.log(cartItems);
   };
