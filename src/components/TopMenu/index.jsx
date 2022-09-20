@@ -60,7 +60,7 @@ const TopMenu = () => {
          className="cart-length-container"
         >
           <div className="cart-lenght-text">
-            <h1>{cartItems.length}</h1>
+            <h1>{cartItems.reduce((acc, curr) => curr.itemAmount + acc, 0)}</h1>
           </div>
         </div>
       </div>

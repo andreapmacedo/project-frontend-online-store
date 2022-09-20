@@ -32,14 +32,25 @@ function MainProvider({ children }) {
     if (cartItems.length === 0) {
       console.log('Seu carrinho está vazio');
     }
-    else {
-      console.log('Seu carrinho NÃO está vazio');
-      cartItems.forEach((product) => {
-        // if (product.itemProduct.id === item.id && product.itemAmount > 0){
-        if (product.itemProduct.id === item.id && product.itemAmount > 0){
-          setCartItem([...cartItems, { itemAmount: product.itemAmount-1,  itemProduct: item}])
-      }})
-    }
+    const updateProducts = cartItems.map((cartItem) => {
+      if (cartItem.itemProduct.id === item.itemProduct.id) {
+        return ({
+          itemAmount: cartItem.itemAmount -1,
+          itemProduct: item.itemProduct,
+        })
+      } else return cartItem;
+    });
+    // else {
+    //   console.log('Seu carrinho NÃO está vazio');
+      console.log(updateProducts);
+      setCartItem(updateProducts);
+    //   // cartItems.forEach((product) => {
+    //   //   // if (product.itemProduct.id === item.id && product.itemAmount > 0){
+    //   //   if (product.itemProduct.id === item.itemProduct.id){
+    //   //     console.log('cheguei')
+    //   //     setCartItem([...cartItems, { itemAmount: product.itemAmount-1,  itemProduct: item.itemProduct }])
+    //   // }})
+    // }
   };
 
   // function addToCart(item) {

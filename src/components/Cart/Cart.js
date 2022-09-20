@@ -27,8 +27,8 @@ export default function Cart() {
         <div
           key={ index }
         >
-          {/* {console.log(product.itemAmount)} */}
-          {product.itemAmount === 1 &&
+          {console.log(product.itemAmount)}
+          {/* {product.itemAmount === 1 && */}
             <CartCard
               productId={ product.itemProduct.id }
               title={ product.itemProduct.title }
@@ -37,7 +37,7 @@ export default function Cart() {
               onClick={ () => removeFromCart(product) }
               shipping={ product.itemProduct.shipping.free_shipping }
             />
-          }
+          {/* } */}
         </div>
       ))
   };
