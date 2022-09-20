@@ -10,7 +10,9 @@ export default function CategoriesCards() {
   const {
     selectedListItems,
     setCartItem,
-    cartItems
+    cartItems,
+    addToCart,
+    // addToCartB,
   } = useContext(MainContext);
   
   function renderItems(){
@@ -20,8 +22,7 @@ export default function CategoriesCards() {
     }
 
     function sendToCart(item){
-      console.log(item);
-      setCartItem([...cartItems, item])
+      addToCart(item);
     }
 
     return results
