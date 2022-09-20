@@ -25,7 +25,9 @@ class CategoryCard extends Component {
             alt={ title }
           />
           <div className="info-content">
-            <p>{title}</p>
+            <div className="title-content">
+              <p>{title}</p>
+            </div>
             <div className="price-content">
               <p className="price">
                 {' '}

@@ -1,18 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
-// import { itemName } from '../../services/api';
-import { itemCategoryAndName } from '../../services/api';
 import './style.css';
 import MainContext from '../../Context/MainContext'
 import CategoryCard from '../CategoryCard';
 
-
 export default function Cart() {
   const [listitems, setlistitems] = useState([]);
   const {
-    selectedListItems,
     setCartItem,
     cartItems,
-    searchItem,
   } = useContext(MainContext);
   
   function renderItems(){
@@ -42,19 +37,7 @@ export default function Cart() {
         </div>
       ))
   };
-  
-  
-  useEffect(() => {
-    async function getitems(){
-      const result = await itemCategoryAndName(selectedListItems, searchItem);
-      // const result = await itemName(searchItem);
-      
-      setlistitems(result);
-    }
-    getitems();
-  }, []);
-  // }, [searchItem]);
-      
+        
   return (
     <div className="main-cards-container">
       {renderItems()}

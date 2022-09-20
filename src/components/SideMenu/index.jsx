@@ -18,7 +18,6 @@ export default function MainCards() {
 
   const [listitems, setlistitems] = useState([]);
 
-
   function loadCategoryPage(itemId) {
     console.log(itemId);
     setSearchItem('');
@@ -34,7 +33,6 @@ export default function MainCards() {
     }
     return 'side-item-container';
   }
-
 
   function renderItems(){
     if(!listitems){
