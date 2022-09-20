@@ -6,11 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import PaginaBackEnd from "../paginas/PaginaBackEnd";
 import MainPage from "../pages/MainPage";
 import CategoryPage from "../pages/categoryPage";
-<<<<<<< HEAD
-import ItemDetails from "../pages/ItemDetails";
-=======
 import SearchPage from "../pages/SearchPage/SearchPage";
->>>>>>> roomseven/cart
 
 import MainProvider from '../Provider/MainProvider';
 
@@ -22,15 +18,9 @@ const Rotas = () => (
         <Route exact path='/' element={<MainPage/>}/>
         {/* <Route path='/front-end' element={<FrontEnd/>}/> */}
         {/* <Route path='/back-end'  element={<PaginaBackEnd/>}/> */}
-<<<<<<< HEAD
-        <Route path='/main' element={<MainPage/>}/>
-        <Route path='/product/:id' element={<ItemDetails />}/>
-        <Route path='/category' element={<CategoryPage/>}/>
-=======
         <Route path='/main'  element={<MainPage/>}/>
         <Route path='/category'  element={<CategoryPage/>}/>
         <Route path='/search'  element={<SearchPage/>}/>
->>>>>>> roomseven/cart
       </Routes>
     </BrowserRouter>
   </MainProvider>
