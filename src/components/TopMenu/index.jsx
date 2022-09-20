@@ -1,17 +1,22 @@
-import React, { useState, useContext } from 'react';
-import './style.css';
+import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import MainContext from '../../Context/MainContext';
 import { ShoppingCart, MagnifyingGlass } from 'phosphor-react';
+import './style.css';
 
 const TopMenu = () => {
-  const [searched, setSearched] = useState('');
+  const navigate = useNavigate();
   const {
-    cartItems
+    cartItems,
+    searchItem,
+    setSearchItem
   } = useContext(MainContext);
 
   const inputHandleChange = ({ target }) => {
     const { value } = target;
-    setSearched(value);
+    setSearchItem(value);
+    // direcionar para página de busca
+    // navigate(`/search`);
   };
 
   return (
@@ -27,14 +32,18 @@ const TopMenu = () => {
             autoComplete="off"
             // autoComplete="false"
             onChange={ inputHandleChange }
-            value={ searched }
+            value={ searchItem }
             name="search-input"
             type="text"
             placeholder="search"
           />          
         </div>
-        <div className="search-icon" >
+        <div
+          className="search-icon" 
+          onClick={() => navigate(`/search`)}
+         >
           <MagnifyingGlass size={32} color="#777" />
+          
         </div>
       </div>
 

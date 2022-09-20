@@ -1,0 +1,10 @@
+.main-cards-container{
+  background-color: rgb(232, 230, 230);
+  color: black;
+  padding-left: 20px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}

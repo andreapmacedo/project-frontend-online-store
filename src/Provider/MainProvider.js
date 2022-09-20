@@ -5,11 +5,14 @@ import MainContext from '../Context/MainContext';
 
 function MainProvider({ children }) {
   const [selectedListItems, setSelectedListItems] = useState('');
+  const [searchItem, setSearchItem] = useState('');
   const [cartItems, setCartItem] = useState([]);
 
   const context = {
     selectedListItems,
     setSelectedListItems,
+    searchItem,
+    setSearchItem,
     cartItems,
     setCartItem
   };
