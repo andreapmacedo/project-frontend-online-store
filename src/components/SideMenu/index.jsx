@@ -20,14 +20,8 @@ export default function MainCards() {
 
 
   function loadCategoryPage(itemId) {
-<<<<<<< HEAD
-    // console.log(itemId);
-    // console.log('typeof', typeof itemId);
-
-=======
     console.log(itemId);
     setSearchItem('');
->>>>>>> roomseven/cart
     setSelectedListItems(itemId);
     // history.push(`/category`);
     navigate(`/category`);

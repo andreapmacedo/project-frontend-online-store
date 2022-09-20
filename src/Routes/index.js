@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from "../pages/MainPage";
 import CategoryPage from "../pages/categoryPage";
 import SearchPage from "../pages/SearchPage/SearchPage";
-
+import ItemDetails from "../pages/ItemDetails";
 import MainProvider from '../Provider/MainProvider';
 
 const Rotas = () => (
@@ -19,6 +19,7 @@ const Rotas = () => (
         {/* <Route path='/front-end' element={<FrontEnd/>}/> */}
         {/* <Route path='/back-end'  element={<PaginaBackEnd/>}/> */}
         <Route path='/main'  element={<MainPage/>}/>
+        <Route path='/product/:id' element={<ItemDetails />}/>
         <Route path='/category'  element={<CategoryPage/>}/>
         <Route path='/search'  element={<SearchPage/>}/>
       </Routes>
