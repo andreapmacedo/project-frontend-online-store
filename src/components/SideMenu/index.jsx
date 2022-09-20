@@ -13,6 +13,7 @@ export default function MainCards() {
   const {
     selectedListItems,
     setSelectedListItems,
+    setSearchItem,
   } = useContext(MainContext);
 
   const [listitems, setlistitems] = useState([]);
@@ -20,8 +21,7 @@ export default function MainCards() {
 
   function loadCategoryPage(itemId) {
     console.log(itemId);
-    // console.log('typeof', typeof itemId);
-
+    setSearchItem('');
     setSelectedListItems(itemId);
     // history.push(`/category`);
     navigate(`/category`);
