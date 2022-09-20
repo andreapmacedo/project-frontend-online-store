@@ -33,7 +33,7 @@ function MainProvider({ children }) {
       console.log('Seu carrinho está vazio');
     }
     const updateProducts = cartItems.map((cartItem) => {
-      if (cartItem.itemProduct.id === item.itemProduct.id) {
+      if (cartItem.itemProduct.id === item.itemProduct.id && item.itemAmount > 0) {
         return ({
           itemAmount: cartItem.itemAmount -1,
           itemProduct: item.itemProduct,

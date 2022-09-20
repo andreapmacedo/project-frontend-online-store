@@ -28,7 +28,8 @@ export default function Cart() {
           key={ index }
         >
           {console.log(product.itemAmount)}
-          {/* {product.itemAmount === 1 && */}
+          {/* remove o card caso o produto esteja com 0 unidades */}
+          {/* {product.itemAmount > 0  &&  */}
             <CartCard
               productId={ product.itemProduct.id }
               title={ product.itemProduct.title }
