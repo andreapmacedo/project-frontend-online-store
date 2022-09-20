@@ -19,7 +19,7 @@ export default function MainCards() {
 
 
   function loadCategoryPage(itemId) {
-    console.log(itemId);
+    // console.log(itemId);
     // console.log('typeof', typeof itemId);
 
     setSelectedListItems(itemId);

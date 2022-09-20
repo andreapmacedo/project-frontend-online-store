@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import PaginaBackEnd from "../paginas/PaginaBackEnd";
 import MainPage from "../pages/MainPage";
 import CategoryPage from "../pages/categoryPage";
+import ItemDetails from "../pages/ItemDetails";
 
 // import MainProvider from './Provider/MainProvider';
 // import MainProvider from './Provider/MainProvider';
@@ -16,11 +17,12 @@ const Rotas = () => (
     <BrowserRouter>
       <Routes>
         {/* <Route exact path='/'   element={<MainPage/>}/> */}
-        <Route exact path='/'   element={<MainPage/>}/>
+        <Route exact path='/' element={<MainPage/>}/>
         {/* <Route path='/front-end' element={<FrontEnd/>}/> */}
         {/* <Route path='/back-end'  element={<PaginaBackEnd/>}/> */}
-        <Route path='/main'  element={<MainPage/>}/>
-        <Route path='/category'  element={<CategoryPage/>}/>
+        <Route path='/main' element={<MainPage/>}/>
+        <Route path='/product/:id' element={<ItemDetails />}/>
+        <Route path='/category' element={<CategoryPage/>}/>
       </Routes>
     </BrowserRouter>
   </MainProvider>

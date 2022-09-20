@@ -5,7 +5,7 @@ import MainContext from '../Context/MainContext';
 
 function MainProvider({ children }) {
   const [selectedListItems, setSelectedListItems] = useState('');
-
+  
   const context = {
     selectedListItems,
     setSelectedListItems,
