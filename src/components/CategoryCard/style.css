@@ -48,7 +48,7 @@
 
 .card:hover
 {
-	z-index: 10;
+	z-index: 1;
 }
 
 .card .imgBox
@@ -132,7 +132,7 @@
   visibility: visible;
 	transform: translateY(-62px);
   border: none;
-  z-index: -1;
+  /* z-index: 2; */
 }
 
 .card .info-content {
@@ -146,6 +146,8 @@
   width: 200px;
   height: 90px;
   background-color: #fafafa;
+  z-index: 1;
+
 }
 
 .card .info-content .title-content {
