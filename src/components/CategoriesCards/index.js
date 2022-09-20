@@ -7,7 +7,11 @@ import CategoryCard from '../CategoryCard';
 
 export default function CategoriesCards() {
   const [listitems, setlistitems] = useState([]);
-  const { selectedListItems } = useContext(MainContext);
+  const {
+    selectedListItems,
+    setCartItem,
+    cartItems
+  } = useContext(MainContext);
   
   function renderItems(){
     const { results } = listitems;
@@ -15,13 +19,10 @@ export default function CategoriesCards() {
       return <p>Loading...</p>
     }
 
-    // return results.map((item, index) => {
-    //   return (
-    //     <div key={index}>
-    //       <h1>{item.id}</h1>
-    //     </div>
-    //   )
-    // });
+    function sendToCart(item){
+      console.log(item);
+      setCartItem([...cartItems, item])
+    }
 
     return results
       .map((product) => (
@@ -33,7 +34,7 @@ export default function CategoriesCards() {
             title={ product.title }
             thumbnail={ product.thumbnail }
             price={ product.price }
-            // onClick={ () => sendToCart(product) }
+            onClick={ () => sendToCart(product) }
             shipping={ product.shipping.free_shipping }
           />
         </div>
