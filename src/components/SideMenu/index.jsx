@@ -13,15 +13,21 @@ export default function MainCards() {
   const {
     selectedListItems,
     setSelectedListItems,
+    setSearchItem,
   } = useContext(MainContext);
 
   const [listitems, setlistitems] = useState([]);
 
 
   function loadCategoryPage(itemId) {
+<<<<<<< HEAD
     // console.log(itemId);
     // console.log('typeof', typeof itemId);
 
+=======
+    console.log(itemId);
+    setSearchItem('');
+>>>>>>> roomseven/cart
     setSelectedListItems(itemId);
     // history.push(`/category`);
     navigate(`/category`);
