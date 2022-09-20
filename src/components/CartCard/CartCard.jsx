@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 // import { ShoppingCart } from 'phosphor-react';
 
-import './style.css';
+import './CartCard.css';
 
 import freeShippingSvg from '../../assets/free5.svg';
 

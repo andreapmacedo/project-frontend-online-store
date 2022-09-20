@@ -25,7 +25,7 @@ export default function SearchCards() {
       console.log(item);
       setCartItem([...cartItems, item])
     }
-
+    // todo: tratar retorno undefined
     return results
       .map((product) => (
         <div
@@ -42,13 +42,11 @@ export default function SearchCards() {
         </div>
       ))
   };
-  
-  
+    
   useEffect(() => {
     async function getitems(){
       const result = await itemCategoryAndName(selectedListItems, searchItem);
       // const result = await itemName(searchItem);
-      
       setlistitems(result);
     }
     getitems();

@@ -18,9 +18,8 @@ export default function MainCards() {
 
   const [listitems, setlistitems] = useState([]);
 
-
   function loadCategoryPage(itemId) {
-    console.log(itemId);
+    // console.log(itemId);
     setSearchItem('');
     setSelectedListItems(itemId);
     // history.push(`/category`);
@@ -34,7 +33,6 @@ export default function MainCards() {
     }
     return 'side-item-container';
   }
-
 
   function renderItems(){
     if(!listitems){
@@ -65,7 +63,7 @@ export default function MainCards() {
   useEffect(() => {
     async function getitems(){
       const result = await getCategories();
-      console.log('result', result);
+      // console.log('result', result);
       setlistitems(result);
     }
     getitems();

@@ -5,7 +5,8 @@
     color: black;
     padding-left: 20px;
     padding-top: 20px;
-    /* width: 20%; */
-    /* position: fixed; */
-    /* overflow: auto; */
+
+    position: relative;
+    top: 60px;
+
 }

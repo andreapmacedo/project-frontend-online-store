@@ -6,6 +6,8 @@
   justify-content: space-around;
   align-items: center;
   height: 60px;
+  position: fixed;
+  z-index: 100;
 }
 
 .cart-icon-container {
@@ -15,6 +17,7 @@
   align-items: center;
   width: 60px;
   height: 60px;
+  cursor: pointer;
 }
 
 .cart-length-container {
