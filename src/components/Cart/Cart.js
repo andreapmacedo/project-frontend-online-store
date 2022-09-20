@@ -15,7 +15,6 @@ export default function Cart() {
   //   removeFromCart(item)
   // }
 
-
   function renderItems(){
     
     if(!cartItems){

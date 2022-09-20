@@ -25,37 +25,25 @@ function MainProvider({ children }) {
     } else {
       setCartItem([...cartItems, { itemAmount: 1,  itemProduct: item}])
     }
-    // console.log(cartItems);
   };
 
   function removeFromCart(item) {
-    if (cartItems.length === 0) {
-      console.log('Seu carrinho está vazio');
-    }
-    const updateProducts = cartItems.map((cartItem) => {
-      if (cartItem.itemProduct.id === item.itemProduct.id && item.itemAmount > 0) {
-        return ({
-          itemAmount: cartItem.itemAmount -1,
-          itemProduct: item.itemProduct,
-        })
-      } else return cartItem;
-    });
-    // else {
-    //   console.log('Seu carrinho NÃO está vazio');
-      console.log(updateProducts);
+    
+    if (cartItems[cartItems.indexOf(item)].itemAmount > 1) {
+      const updateProducts = cartItems.map((cartItem) => {
+        if (cartItem.itemProduct.id === item.itemProduct.id ) {
+          return ({
+            itemAmount: cartItem.itemAmount -1,
+            itemProduct: item.itemProduct,
+          })
+        } else return cartItem;
+      });
       setCartItem(updateProducts);
-    //   // cartItems.forEach((product) => {
-    //   //   // if (product.itemProduct.id === item.id && product.itemAmount > 0){
-    //   //   if (product.itemProduct.id === item.itemProduct.id){
-    //   //     console.log('cheguei')
-    //   //     setCartItem([...cartItems, { itemAmount: product.itemAmount-1,  itemProduct: item.itemProduct }])
-    //   // }})
-    // }
-  };
+    } else {
+      setCartItem(cartItems.filter((cartItem) => cartItem.itemProduct.id !== item.itemProduct.id));
+    }    
 
-  // function addToCart(item) {
-  //   setCartItemB([...cartItems, item]);
-  // }
+  };
 
   const context = {
     selectedListItems,
