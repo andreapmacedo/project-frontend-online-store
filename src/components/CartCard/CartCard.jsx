@@ -1,16 +1,31 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-// import { ShoppingCart } from 'phosphor-react';
+import AmountButton from '../AmountButton/AmountButton';
+import MainContext from '../../Context/MainContext';
 
 import './CartCard.css';
 
 import freeShippingSvg from '../../assets/free5.svg';
 
-class CategoryCard extends Component {
-  render() {
-    const { productId, thumbnail, title, price, onClick, shipping } = this.props;
-    return (
+const CartCard = (props) => {
+  const { productId, thumbnail, title, price, onClick, shipping, item } = props;
+  const {
+    cartItems,
+  } = useContext(MainContext);
+
+  function getItemAmount() {
+    let result = 0;
+    cartItems.forEach((cartItem) => {
+      if (cartItem.itemProduct.id === productId) {
+        result = (cartItem.itemAmount);
+      }
+    });
+    return result;
+  }
+
+  return (
+    
       <div className="card" >
         <div className="free-shipping-svg">
         { shipping && <img src={ freeShippingSvg } alt="Profile" /> }          
@@ -37,21 +52,18 @@ class CategoryCard extends Component {
           </div>
           
         </Link>
-        
         <div className="btn-container">
-          <input
-            className="btnAdd"
-            type="button"
-            value="ADICIONAR AO CARRINHO"
-            onClick={ onClick }
+          <AmountButton
+          amount={ getItemAmount() }
+          itemId={ productId }
+          item={ item }
           />
         </div>
       </div>
-    );
-  }
+  )
 }
 
-CategoryCard.propTypes = {
+CartCard.propTypes = {
   productId: PropTypes.string,
   thumbnail: PropTypes.string,
   title: PropTypes.string,
@@ -59,4 +71,4 @@ CategoryCard.propTypes = {
   onClick: PropTypes.func,
 }.isRequired;
 
-export default CategoryCard;
+export default CartCard;
