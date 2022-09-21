@@ -9,10 +9,7 @@ export default function CategoriesCards() {
   const [listitems, setlistitems] = useState([]);
   const {
     selectedListItems,
-    setCartItem,
-    cartItems,
     addToCart,
-    // addToCartB,
   } = useContext(MainContext);
   
   function renderItems(){
@@ -22,6 +19,7 @@ export default function CategoriesCards() {
     }
 
     function sendToCart(item){
+      console.log('item', item);
       addToCart(item);
     }
 

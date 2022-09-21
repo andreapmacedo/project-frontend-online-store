@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import MainContext from '../../Context/MainContext'
 import BotaoVoltar from '../../components/BotaoVoltar';
 import TopMenu from '../../components/TopMenu';
 import SideMenu from '../../components/SideMenu';
@@ -8,8 +9,14 @@ import { itemDetails } from '../../services/api';
 import Review from '../../components/Review/Review';
 
 const ItemDetails = () => {
+  const {
+    removeFromCart,
+    addToCart,
+    cartItems,
+  } = useContext(MainContext);
+
   const [item, setItem] = useState({});
-  const [itemQuantity, setItemQuantity] = useState(1);
+  const [itemQuantity, setItemQuantity] = useState(0);
   const { id } = useParams();
 
   useEffect(() => {
@@ -23,16 +30,20 @@ const ItemDetails = () => {
   const add = () => {
     if (itemQuantity < item.available_quantity) {
       setItemQuantity((prevState) => Number(prevState) + 1);
+      addToCart(item);
     }
   }
 
   const remove = () => {
     if (itemQuantity > 0) {
       setItemQuantity((prevState) => Number(prevState) - 1);
+      cartItems.forEach((cartItem) => {
+        if (cartItem.itemProduct.id === item.id) {
+          removeFromCart(cartItem);
+        }
+      });
     }
   }
-
-  console.log(item);
 
   return (
   <div className="main-page-container">

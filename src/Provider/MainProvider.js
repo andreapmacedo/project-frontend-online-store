@@ -28,7 +28,7 @@ function MainProvider({ children }) {
   };
 
   function removeFromCart(item) {
-    
+    console.log('item', item);
     if (cartItems[cartItems.indexOf(item)].itemAmount > 1) {
       const updateProducts = cartItems.map((cartItem) => {
         if (cartItem.itemProduct.id === item.itemProduct.id ) {
