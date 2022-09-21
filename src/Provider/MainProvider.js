@@ -6,6 +6,7 @@ import MainContext from '../Context/MainContext';
 function MainProvider({ children }) {
   const [selectedListItems, setSelectedListItems] = useState('');
   const [searchItem, setSearchItem] = useState('');
+  const [btnStatus, setBtnStatus] = useState(true);
   const [cartItems, setCartItem] = useState([]);
   
   function addToCart(item) {
@@ -54,6 +55,8 @@ function MainProvider({ children }) {
     setCartItem,
     addToCart,
     removeFromCart,
+    btnStatus,
+    setBtnStatus,
   };
 
   return (

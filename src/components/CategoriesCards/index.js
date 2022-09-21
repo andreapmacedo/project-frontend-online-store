@@ -4,7 +4,6 @@ import './style.css';
 import MainContext from '../../Context/MainContext'
 import CategoryCard from '../CategoryCard';
 
-
 export default function CategoriesCards() {
   const [listitems, setlistitems] = useState([]);
   const {
@@ -44,6 +43,7 @@ export default function CategoriesCards() {
     async function getitems(){
       // const result = await itemCategory('MLB5672');
       const result = await itemCategory(selectedListItems);
+      console.log('result', result);
       // console.log('result', result);
       setlistitems(result);
     }

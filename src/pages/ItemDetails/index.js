@@ -23,9 +23,25 @@ const ItemDetails = () => {
     const getItemDetails = async(selectedItemId) => {
       const details = await itemDetails(id);
       setItem(details);
+      setItemQuantity();
     }
     getItemDetails(id);
   }, [id]);
+
+  useEffect(() => {
+    const setQuantity = () => {
+      // console.log('cartItems', cartItems);
+      if (cartItems.length === 0) return setItemQuantity(0);
+      cartItems.forEach((cartItem) => {
+        console.log(cartItem);
+        if (cartItem.itemProduct.id === id) {
+          console.log('cartItem.amount', cartItem.itemAmount);
+          setItemQuantity(cartItem.itemAmount);
+        }
+      });
+    }
+    setQuantity();
+  });
 
   const add = () => {
     if (itemQuantity < item.available_quantity) {
@@ -80,7 +96,7 @@ const ItemDetails = () => {
           <h4>Quantidade: { itemQuantity }</h4>
           <h3>Total: R$ { (itemQuantity * item.price ).toFixed(2) } </h3>
         </div>
-        <Review />
+        {/* <Review /> */}
       </section>
     </div>
     <BotaoVoltar />
