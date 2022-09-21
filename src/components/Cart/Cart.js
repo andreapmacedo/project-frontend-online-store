@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './style.css';
 import MainContext from '../../Context/MainContext'
 import CartCard from '../CartCard/CartCard';
+// import AmountButton from '../AmountButton/AmountButton';
 
 export default function Cart() {
   const {
@@ -27,6 +28,7 @@ export default function Cart() {
             price={ product.itemProduct.price }
             onClick={ () => removeFromCart(product) }
             shipping={ product.itemProduct.shipping.free_shipping }
+            item={ product }
           />
         </div>
       ))

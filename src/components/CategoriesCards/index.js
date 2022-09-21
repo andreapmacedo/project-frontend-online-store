@@ -19,7 +19,6 @@ export default function CategoriesCards() {
     }
 
     function sendToCart(item){
-      console.log('item', item);
       addToCart(item);
     }
 
