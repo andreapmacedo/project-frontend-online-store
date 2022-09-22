@@ -8,6 +8,7 @@ function MainProvider({ children }) {
   const [searchItem, setSearchItem] = useState('');
   const [btnStatus, setBtnStatus] = useState(true);
   const [cartItems, setCartItem] = useState([]);
+  const [categorySelected, setCategorySelected] = useState([]);
   
   function addToCart(item) {
     if (cartItems.length === 0) {
@@ -57,6 +58,8 @@ function MainProvider({ children }) {
     removeFromCart,
     btnStatus,
     setBtnStatus,
+    categorySelected,
+    setCategorySelected
   };
 
   return (
