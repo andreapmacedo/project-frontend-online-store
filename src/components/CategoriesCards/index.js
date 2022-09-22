@@ -65,7 +65,7 @@ export default function CategoriesCards() {
     getitems();
   }, [selectedListItems]);
 
-  // Função responsável por abrir o dialog de alerta ao esgotar um produto
+  // Função responsável por abrir o dialog de alerta ao esgotar um produto.
   function openDialog() {
     // setClassIsShowDialog('dialogOn');
     const modal = document.querySelector('.modal');
