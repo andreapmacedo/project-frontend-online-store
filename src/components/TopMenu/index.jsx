@@ -13,6 +13,7 @@ const TopMenu = () => {
     setSearchItem,
     setBtnStatus,
     btnStatus,
+    categorySelected
   } = useContext(MainContext);
 
   const inputHandleChange = ({ target }) => {
@@ -38,7 +39,7 @@ const TopMenu = () => {
                 value={ searchItem }
                 name="search-input"
                 type="text"
-                placeholder="search"
+                placeholder={ `Pesquisar em ${categorySelected}` }
               />          
             </div>
             <div
