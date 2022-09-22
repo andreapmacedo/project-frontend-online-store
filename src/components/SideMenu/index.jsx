@@ -65,8 +65,8 @@ export default function MainCards() {
   useEffect(() => {
     async function getitems(){
       const result = await getCategories();
-      // console.log('result', result);
-      setlistitems(result);
+      const resultFiltered = result.filter((category) => category.name !== 'Serviços');
+      setlistitems(resultFiltered);
     }
     getitems();
   }, []);
