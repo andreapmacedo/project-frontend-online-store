@@ -284,3 +284,9 @@
     /* margin-left: 250px; */
     padding-left: 10px;
   }
+
+  .original-price {
+    text-decoration: line-through;
+    font-size: 12px;
+    color: rgb(156, 156, 156);
+  }

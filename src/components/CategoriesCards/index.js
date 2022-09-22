@@ -49,6 +49,7 @@ export default function CategoriesCards() {
             title={ product.title }
             thumbnail={ product.thumbnail }
             price={ product.price }
+            originalPrice={ product.original_price }
             onClick={ () => sendToCart(product) }
             shipping={ product.shipping.free_shipping }
           />
