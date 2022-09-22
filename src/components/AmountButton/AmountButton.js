@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import './AmountButton.css';
 import MainContext from '../../Context/MainContext'
 

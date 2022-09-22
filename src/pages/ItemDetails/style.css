@@ -17,6 +17,7 @@
 }
 
 .item-details {
+  margin-top: 60px;
   background-color: rgb(177, 177, 177); 
   width: 70%;
   display: flex;
