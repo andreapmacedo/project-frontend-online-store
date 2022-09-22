@@ -9,6 +9,7 @@ export default function CategoriesCards() {
   const {
     selectedListItems,
     addToCart,
+    cartItems,
   } = useContext(MainContext);
   
   function renderItems(){
@@ -17,8 +18,23 @@ export default function CategoriesCards() {
       return <p>Loading...</p>
     }
 
+    function getCartItemQuantity(item) {
+      let quantity = 0;
+      cartItems.forEach((cartItem) => {
+        if (cartItem.itemProduct.id === item.id) {
+          quantity = cartItem.itemAmount;
+        }
+      });
+      return quantity;
+    }
+
     function sendToCart(item){
-      addToCart(item);
+      const quantity = getCartItemQuantity(item);
+      if (quantity < item.available_quantity) {    
+        addToCart(item);
+      } else {
+        // TODO: show max quantity message
+      }
     }
 
     return results
