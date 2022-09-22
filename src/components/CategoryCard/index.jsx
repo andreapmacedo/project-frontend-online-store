@@ -32,7 +32,7 @@ class CategoryCard extends Component {
               <p class="original-price">{ (originalPrice && (originalPrice !== price)) && `R$ ${ originalPrice.toFixed(2).replace('.', ',') }` }</p>
               <p className="price">
                 {' '}
-                {`R$ ${price.toFixed(2).replace('.', ',')}`}
+                { `R$ ${price.toFixed(2).replace('.', ',')}` }
               </p>
             </div>
           </div>
