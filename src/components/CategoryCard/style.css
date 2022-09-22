@@ -72,8 +72,8 @@
 .card .imgBox img
 {
 	
-	max-width: 140px;
-	max-height: 140px;
+	max-width: 125px;
+	max-height: 125px;
   margin: 0px 0 20px;
 	transition: 0.5s ease-in-out;
 }

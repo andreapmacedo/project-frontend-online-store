@@ -31,7 +31,7 @@ class CategoryCard extends Component {
             <div className="price-content">
               <p className="price">
                 {' '}
-                {`R$ ${price.toFixed(2).replace('.', ',')}`}
+                { price ? `R$ ${price.toFixed(2).replace('.', ',')}` : `Entrar em contato` }
               </p>
             </div>
           </div>
