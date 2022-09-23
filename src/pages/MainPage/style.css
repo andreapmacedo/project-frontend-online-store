@@ -7,7 +7,7 @@
 }
 
 .main-body-container{
-  background-color: yellow;
+  /* background-color: yellow; */
   display: flex;
 }
 
@@ -18,8 +18,9 @@
 }
 
 .main-body-cards{
-  background-color: blue;
+  /* background-color: blue; */
   /* display: flex;
   flex-wrap: wrap; */
+  background-color: #E8E6E6;
   width: 100%;
 }
