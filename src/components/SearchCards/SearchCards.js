@@ -4,6 +4,7 @@ import { itemCategoryAndName } from '../../services/api';
 import './style.css';
 import MainContext from '../../Context/MainContext'
 import CategoryCard from '../CategoryCard';
+import Loading from '../Loading/Loading';
 
 
 export default function SearchCards() {
@@ -20,7 +21,7 @@ export default function SearchCards() {
   function renderItems(){
     const { results } = listitems;
     if(!results){
-      return <p>Loading...</p>
+      return <Loading />
     }
 
     function sendToCart(item){

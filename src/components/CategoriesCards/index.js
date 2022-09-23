@@ -4,6 +4,7 @@ import './style.css';
 import MainContext from '../../Context/MainContext'
 import CategoryCard from '../CategoryCard';
 import { Info } from "phosphor-react";
+import Loading from '../Loading/Loading';
 
 export default function CategoriesCards() {
   const [listitems, setlistitems] = useState([]);
@@ -16,8 +17,9 @@ export default function CategoriesCards() {
   
   function renderItems(){
     const { results } = listitems;
-    if(!results){
-      return <p>Loading...</p>
+    
+    if(!listitems.results){
+      return <Loading />
     }
 
     function getCartItemQuantity(item) {
@@ -59,6 +61,7 @@ export default function CategoriesCards() {
   
   // Este useEffect é responsável atualizar a lista de itens toda vez que o context for atualizado.
   useEffect(() => {
+    setlistitems([]);
     async function getitems(){
       const result = await itemCategory(selectedListItems);
       setlistitems(result);
@@ -81,7 +84,7 @@ export default function CategoriesCards() {
 
   return (
     <div className="main-cards-container">
-      {renderItems()}
+      { renderItems() }
       <div className="modal"  onClick={ closeDialog } >
         <div className="modal-content">
           <span className="close" onClick={ closeDialog }>&times;</span>

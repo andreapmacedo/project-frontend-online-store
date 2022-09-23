@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { getCategories } from '../../services/api';
 import MainContext from '../../Context/MainContext'
 import './style.css';
+import Loading from '../Loading/Loading';
 
 export default function MainCards() {
   // const history = useNavigate();
@@ -38,8 +39,9 @@ export default function MainCards() {
 
   function renderItems(){
     if(!listitems){
-      return <p>Loading...</p>
+      return <Loading />
     }
+    
     return listitems.map((item, index) => {
       return (
         <div 
@@ -90,7 +92,7 @@ export default function MainCards() {
     
   return (
     <div className="side-menu-container">
-      {renderItems()}
+      { renderItems() }
     </div>
   )
 };

@@ -8,3 +8,21 @@
   flex-wrap: wrap;
   align-items: center;
 }
+
+.cart-empty {
+  margin-top: 100px;
+  min-width: 50px;
+  max-width: 300px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-empty .title-cart{
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+.cart-empty .subtitle-cart {
+  color: rgb(114, 114, 114);
+}
