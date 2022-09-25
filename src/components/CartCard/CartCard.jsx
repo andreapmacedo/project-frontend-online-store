@@ -29,7 +29,6 @@ const CartCard = (props) => {
         <div className="free-shipping-svg">
         { shipping && <img src={ freeShippingSvg } alt="Profile" /> }          
         </div>
-        
         <div 
           className="card-link"
         >
@@ -58,8 +57,6 @@ const CartCard = (props) => {
             </div>
           </div>
         </div>
-          
-        
       </div>
   )
 }
