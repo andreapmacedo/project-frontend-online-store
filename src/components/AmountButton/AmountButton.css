@@ -16,21 +16,13 @@
   align-items: center;
   justify-content: center;
   width: 50px;
+  height: 20px;
   cursor: pointer;
-  /* background-color: #ddd; */
-  /* border-radius: 50%; */
-  /* width: 18px; */
-  /* height: 18px; */
-}
-
-.amount-button-left input {
-  border: none;
-  background-color: #2FC08C;
-  font-size: 1.2em;
+  border-radius: 10px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
   color: #eee;
-  cursor: pointer;
-  /* background-color: #ddd; */
-  /* font-size: large; */
+  user-select: none;
 }
 
 .amount-button-right {
@@ -40,17 +32,27 @@
   width: 50px;
   height: 20px;
   cursor: pointer;
+  border-radius: 10px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  color: #eee;
+  user-select: none;
   /* background-color: red; */
 }
 
-.amount-button-right input {
-  border: none;
-  background-color: #2FC08C;
-  font-size: 1.2em;
-  color: #eee;
-  cursor: pointer;
+.amount-button-right:active, .amount-button-left:active
+{
+  border-radius: 10px;
+  transition: 0.25s ease-in-out;
+  /* visibility: hidden; */
+  /* color: white; */
+  background-color: #777;
+  color: #fff;
 }
 
+.amount-button-right:after, .amount-button-left:after {
+  color: rgb(64, 238, 20); 
+}
 
 .amount-button-center {
   display: flex;
