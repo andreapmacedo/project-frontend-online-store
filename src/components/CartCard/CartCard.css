@@ -18,7 +18,7 @@
 	overflow: hidden;
 	padding: 0;
 	position: relative;
-	width: 240px;
+	width: 220px;
 }
 
 .cart-card .free-shipping-svg {
@@ -58,6 +58,7 @@
   color: black;
   font-size: 0.6em;
   text-decoration: none;  
+  padding-left: 6px;
 }
 
 .cart-card .btn-container
@@ -76,11 +77,14 @@
   width: 220px;
   height: 110px;
   background-color: #fafafa;
+  font-size: 0.8em;
   /* background-color: bisque; */
 }
 
 .cart-card .info-content .title-content {
   /* background-color: aqua; */
+  padding-left: 10px;
+  padding-right: 10px;
   max-height: 90px;
   overflow: hidden;
   font-size: 1.1em;
@@ -95,6 +99,6 @@
 }
 
 .cart-card .info-content .price-content .price {
-  font-size: 1.0em;
+  font-size: 1.1em;
   font-weight: bolder;
 }
