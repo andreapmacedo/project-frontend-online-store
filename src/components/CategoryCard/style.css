@@ -204,7 +204,7 @@
 
 .card .btnAdd:active {
   color: white;
-  background-color: white;
+  background-color: #777;
 }
 
 /* @media only screen and (hover: none) and (pointer: coarse){
