@@ -14,14 +14,16 @@ export default function MainCards() {
     selectedListItems,
     setSelectedListItems,
     setSearchItem,
+    setCategorySelected
   } = useContext(MainContext);
 
   const [listitems, setlistitems] = useState([]);
 
-  function loadCategoryPage(itemId) {
+  function loadCategoryPage(itemId, itemName) {
     // console.log(itemId);
     setSearchItem('');
     setSelectedListItems(itemId);
+    setCategorySelected(itemName);
     // history.push(`/category`);
     navigate(`/category`);
   }
@@ -46,7 +48,7 @@ export default function MainCards() {
 
         key={index}
           // onClick={() => console.log(item)}
-          onClick={() => loadCategoryPage(item.id)}
+          onClick={() => loadCategoryPage(item.id, item.name)}
         >
           <div
             className="side-item-text"
