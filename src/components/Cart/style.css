@@ -26,3 +26,7 @@
 .cart-empty .subtitle-cart {
   color: rgb(114, 114, 114);
 }
+
+.cart-empty img {
+  width: 150px;
+}

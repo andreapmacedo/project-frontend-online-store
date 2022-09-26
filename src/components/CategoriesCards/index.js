@@ -7,6 +7,7 @@ import { Info } from "phosphor-react";
 import Loading from '../Loading/Loading';
 
 export default function CategoriesCards() {
+  let intervalID;
   const [listitems, setlistitems] = useState([]);
 
   const {
@@ -71,15 +72,36 @@ export default function CategoriesCards() {
 
   // Função responsável por abrir o dialog de alerta ao esgotar um produto.
   function openDialog() {
-    // setClassIsShowDialog('dialogOn');
     const modal = document.querySelector('.modal');
     modal.classList.add("active");
-  }
 
+    // O código abaixo lida com a barra de tempo de fechamento do dialog;
+    let barWidth = 100;
+
+    const animate = () => {
+      const progressBar = document.getElementById("bar");
+      barWidth--;
+      progressBar.style.width = `${barWidth}%`;
+    };
+    animate();
+    setTimeout(() => {
+      intervalID = setInterval(() => {
+        if (barWidth === 0) {
+          clearInterval(intervalID);
+          closeDialog();
+          barWidth = 100;
+        } else {
+          animate();
+        }
+      }, 35);
+    }, 500);
+  }
+  
   // Função responsável por fechar o dialog de alerta
   function closeDialog() {
     const modal = document.querySelector('.modal');
     modal.classList.remove("active");
+    clearInterval(intervalID);
   }
 
   return (
@@ -88,10 +110,13 @@ export default function CategoriesCards() {
       <div className="modal"  onClick={ closeDialog } >
         <div className="modal-content">
           <span className="close" onClick={ closeDialog }>&times;</span>
-          <div className="message">
-            <Info size={32} />
-            <p>A quantidade de itens disponíves pelo vendendor se esgotou!</p>
-          </div>
+            <div className="message">
+              <Info size={32} />
+              <p>A quantidade de itens disponíves pelo vendendor se esgotou!</p>
+            </div>
+            <div id="progress">
+              <div id="bar"></div>
+            </div>
         </div>
       </div>
     </div>
