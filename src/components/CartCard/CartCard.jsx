@@ -25,20 +25,26 @@ const CartCard = (props) => {
   }
 
   return (
-    
-      <div className="card" >
+      <div className="cart-card" >
         <div className="free-shipping-svg">
         { shipping && <img src={ freeShippingSvg } alt="Profile" /> }          
         </div>
-
-        <Link
-          to={ `/product/${productId}` }
+        <div 
           className="card-link"
         >
-          <img className="imgBox"
+          <img
+            className="imgBox"
             src={ thumbnail }
             alt={ title }
           />
+          
+          <div className="btn-container">
+            <AmountButton
+            amount={ getItemAmount() }
+            itemId={ productId }
+            item={ item }
+            />
+          </div>
           <div className="info-content">
             <div className="title-content">
               <p>{title}</p>
@@ -50,14 +56,6 @@ const CartCard = (props) => {
               </p>
             </div>
           </div>
-          
-        </Link>
-        <div className="btn-container">
-          <AmountButton
-          amount={ getItemAmount() }
-          itemId={ productId }
-          item={ item }
-          />
         </div>
       </div>
   )

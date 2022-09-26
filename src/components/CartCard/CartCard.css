@@ -1,57 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-.card {
-  margin: 0;
-	padding: 0;
-	font-family: 'Poppins', sans-serif;
+.cart-card {
+	align-items: center;
   background-color: white;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/* min-height: 100vh; */
-	overflow: hidden;
-	/* padding: 100px 50px; */
+  /* background-color: yellow; */
 	box-sizing: border-box;
-}
-
-.card
-{
-	position: relative;
-	width: 220px;
-	height: 300px;
-	margin: 8px 8px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/* background: rgba(255,255,255,0.05); */
 	box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 	border-radius: 4px;
-	/* backdrop-filter: blur(15px); */
   border: none;
+	display: flex;
+  flex-direction: column;
+	font-family: 'Poppins', sans-serif;
+	height: 340px;
+	justify-content: center;
+  margin: 0;
+	margin: 8px 8px;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	width: 220px;
 }
 
-.card .free-shipping-svg {
+.cart-card .free-shipping-svg {
   top: 4px;
   left: 4px;
   position: absolute;
-  /* position: relative; */
 }
 
 
-.card-link {
+.card-cart .card-link {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.card:hover
-{
-	z-index: 1;
-}
-
-.card .imgBox
+.cart-card .imgBox
 {
 	position: relative;
 	padding: 25px;
@@ -59,228 +43,62 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	transition: 0.5s ease-in-out;
-  max-width: 145px;
-	max-height: 145px;
+  max-width: 125px;
+	max-height: 125px;
 }
 
-.card:hover .imgBox
+.cart-card .imgBox img
 {
-	transform: translateY(-10px);
-}
-
-.card .imgBox img
-{
-	
-	max-width: 140px;
-	max-height: 140px;
+	max-width: 125px;
+	max-height: 125px;
   margin: 0px 0 20px;
-	transition: 0.5s ease-in-out;
 }
 
-.card h5{
-  font-size: 1em;
-  font-size: 0.7em;
-  overflow: hidden;
-}
-
-.card a {
+.cart-card a {
   color: black;
-  font-size: 0.8em;
+  font-size: 0.6em;
   text-decoration: none;  
+  padding-left: 6px;
 }
 
-.price-content {
-  position: absolute;
-  width: 100%;
-  bottom: 1px;
-  left: 12px;
-  z-index: 4;
-}
-
-.price-content .price {
-  font-size: 1.1em;
-  font-weight: bolder;
-}
-
-
-/* .card:hover .imgBox img
+.cart-card .btn-container
 {
-	transform:  translate(-20px,-40px) rotate(-25deg) scale(1.4);
-} */
-/* .card .imgBox h2
-{
-	color: #fff;
-	font-weight: 600;
-} */
-.card .btn-container
-{
-	position: absolute;
-	bottom: 82px;
-  display: flex;
-  flex-direction: column;
-  transition: 0.5s ease-in-out;
-  opacity: 0;
-  visibility: hidden;
-  border: none; 
-  /* z-index: -1; */
-}
-
-.card:hover .btn-container
-{
-  opacity: 1;
-  visibility: visible;
-	transform: translateY(-62px);
   border: none;
-  /* z-index: 2; */
+  padding-bottom: 10px; 
 }
 
-.card .info-content {
+.cart-card .info-content {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 15px;
-  transform: translateY(10px);
   border: #2FC08C solid 1px;
   color : #444;
-  width: 200px;
-  height: 90px;
+  width: 220px;
+  height: 110px;
   background-color: #fafafa;
-  z-index: 1;
-
+  font-size: 0.8em;
+  /* background-color: bisque; */
 }
 
-.card .info-content .title-content {
-  max-height: 68px;
+.cart-card .info-content .title-content {
+  /* background-color: aqua; */
+  padding-left: 10px;
+  padding-right: 10px;
+  max-height: 90px;
   overflow: hidden;
   font-size: 1.1em;
-
   text-overflow: ellipsis;
-  /* white-space: nowrap; */
-
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-
-.card .info-content .shipping {
-  color: red;
-  border-radius: 2px;
-  /* background-color: red; */
-  font-weight: 100;
-  width: 100%;
-  text-align: center;
-  
+.cart-card .info-content .price-content {
+  /* background-color: aqua; */
+  bottom: 12px;
 }
 
-.card .btnAdd {
-  /* border: #2FC08C solid 1px; */
-  /* background-color: #2FC08C; */
-  border: none;
-  color: #2fc08c;
-  background-color: #fff;
+.cart-card .info-content .price-content .price {
+  font-size: 1.1em;
+  font-weight: bolder;
 }
-
-.card .btnAdd {
-  position: relative;
-  /* background-color: #2fc08c; */
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-  font-size: 0.8em;
-  border: #2FC08C solid 1px;
-  border-radius: 20px;
-  padding: 4PX;
-  color: white;
-  background-color: #2fc08c;
-  width: 200px;
-}
-
-.card .btnAdd:after {
-  color: rgb(64, 238, 20);
-}
-
-.card .btnAdd:active {
-  color: white;
-  background-color: white;
-}
-
-/* @media only screen and (hover: none) and (pointer: coarse){
-
-  .card .content
-  {
-    visibility: visible;
-    transform: translateY(-100px);
-  } 
-  
-} */
-
-@media (hover: none) and (pointer: coarse){
-
-  .card .btn-container
-  {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(-55px);
-  } /* Regular CSS rules here*/
-}
-
-.navigation-container {
-    /* border-left: 1px solid black; */
-    /* border-right: 1px solid black; */
-    /* position: fixed; */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-left: 5px;
-    /* margin: 100px 10px; */
-    /* position: fixed; */
-    width: 250px;
-    font-family: 'Poppins', sans-serif;
-    top: 50px;
-  }
-  
-  .navigation-container h1 {
-    font-size: 16px;
-    margin: 0;
-    /* padding: 10px 0; */
-  }
-  
-  .navigation-container nav {
-    display: flex;
-    flex-direction: column;
-    /* flex-wrap: wrap; */
-    /* overflow-y: scroll; */
-  }
-  
-  .navigation-container nav div {
-    /* background-color: yellow; */
-    /* border: 1px solid black; */
-    border-bottom: 1px solid #2fc08c;;
-    border-radius: 0 0 0 8px;
-    /* border-radius: 4px; */
-    /* margin: 4px; */
-    flex-grow: 1;
-    text-align: center;
-    font-size: 1.3em;
-  }
-  
-  .navigation-container input {
-    /* background-color: yellow; */
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    padding: 2px;
-    /* margin: 4px; */
-    background-color: #ddd;
-    /* color:111;  */
-  }
-  
-  .product-container {
-    display: flex;
-    flex-wrap: wrap;
-    /* margin-left: 250px; */
-    padding-left: 10px;
-  }

@@ -28,25 +28,23 @@ const AmountButton = (props) => {
 
   return (
   <div className="amount-button-container">
-    <div className="amount-button-left">
-      <input
-        className="btnAddd"
-        type="button"
-        value="+"
-        onClick={ add }
-      />
-    </div>    
+    <b>
+      <div className="amount-button-left"
+        onClick={ remove }
+        >
+          -
+      </div>    
+    </b>
     <div className="amount-button-center">
       { amount }
-    </div>    
-    <div className="amount-button-right">
-      <input
-        className="btnRemm"
-        type="button"
-        value="-"
-        onClick={ remove }
-      />    
-    </div>    
+    </div> 
+    <b>
+      <div className="amount-button-right"
+        onClick={ add }
+        >   
+        +
+      </div>    
+    </b>   
   </div>
   )
 };

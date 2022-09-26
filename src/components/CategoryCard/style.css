@@ -71,7 +71,6 @@
 
 .card .imgBox img
 {
-	
 	max-width: 125px;
 	max-height: 125px;
   margin: 0px 0 20px;
@@ -204,7 +203,7 @@
 
 .card .btnAdd:active {
   color: white;
-  background-color: white;
+  background-color: #777;
 }
 
 /* @media only screen and (hover: none) and (pointer: coarse){
