@@ -3,6 +3,9 @@ import './style.css';
 import MainContext from '../../Context/MainContext'
 import CartCard from '../CartCard/CartCard';
 // import AmountButton from '../AmountButton/AmountButton';
+// import { ShoppingCart } from 'phosphor-react';
+import carrinhoVazio from '../../assets/carrinhoVazio.svg';
+
 
 export default function Cart() {
   const {
@@ -10,10 +13,15 @@ export default function Cart() {
     cartItems,
   } = useContext(MainContext);
   
-  function renderItems(){
-    
-    if(!cartItems){
-      return <p>Seu carrinho está vazio</p>
+  function renderItems(){    
+    if(!cartItems.length){
+      return (
+        <div className="cart-empty">
+          <img src={ carrinhoVazio } alt="sacola-img" />
+          <p className="title-cart">Seu carrinho está vazio!</p>
+          <p className="subtitle-cart">Vá para a página inicial ou procure no site os produtos que vão te deixar feliz. Quando encontrá-los, clique no botão adicionar ao carrinho ;)</p>
+        </div>
+      )
     }
 
     return cartItems

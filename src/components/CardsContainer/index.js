@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getCategories } from '../../services/api';
 import './style.css';
+import Loading from '../Loading/Loading';
 
 
 export default function MainCards() {
@@ -8,7 +9,7 @@ export default function MainCards() {
 
   function renderitems(){
     if(!listitems){
-      return <p>Loading...</p>
+      return <Loading />
     }
     return listitems.map((item, index) => {
       return (
