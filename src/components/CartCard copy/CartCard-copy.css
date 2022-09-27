@@ -102,13 +102,3 @@
   font-size: 1.1em;
   font-weight: bolder;
 }
-
-.price-container .price-left {
-  display: flex;
-  flex-direction: column;
-}
-
-.price-container .price-right {
-  display: flex;
-  flex-direction: column;
-}

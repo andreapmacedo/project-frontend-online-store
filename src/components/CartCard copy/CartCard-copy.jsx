@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import AmountButton from '../AmountButton/AmountButton';
 import MainContext from '../../Context/MainContext';
@@ -24,7 +25,7 @@ const CartCard = (props) => {
   }
 
   return (
-    <div className="cart-card" >
+      <div className="cart-card" >
         <div className="free-shipping-svg">
         { shipping && <img src={ freeShippingSvg } alt="Profile" /> }          
         </div>
@@ -48,37 +49,12 @@ const CartCard = (props) => {
             <div className="title-content">
               <p>{title}</p>
             </div>
-            {/* <div className="price-container">
+            <div className="price-container">
               <p className="price">
                 {' '}
                 {`R$ ${price.toFixed(2).replace('.', ',')}`}
               </p>
-            </div> */}
-            <div className="price-container">
-              <div className="price-left">
-                {/* <p>de:</p>   */}
-                {/* <p class="original-price">{ (originalPrice && (originalPrice !== price)) && `R$ ${ originalPrice.toFixed(2).replace('.', ',') }` }</p> */}
-                <div>
-                  { `${getItemAmount()} x `}
-                </div>
-                <div>
-                  { `R$ ${price.toFixed(2).replace('.', ',')}` }    
-                </div>
-
-              </div>
-              <div className="price-right">
-                {/* <p>por:</p> */}
-                <div>
-                  Total:
-                </div>
-                <div>
-                  <p className="price">
-                    { `R$ ${ (getItemAmount() * price).toFixed(2).replace('.', ',')}` }
-                  </p>
-                </div>
-              </div>
             </div>
-
           </div>
         </div>
       </div>
