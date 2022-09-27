@@ -13,6 +13,7 @@ import ItemDetails from "../pages/ItemDetails";
 import CartPage from "../pages/CartPage/CartPage";
 
 import MainProvider from '../Provider/MainProvider';
+import PurchaseCheckout from '../pages/purchaseCheckout/PurchaseCheckout';
 
 const Rotas = () => (
   <MainProvider>
@@ -27,6 +28,7 @@ const Rotas = () => (
         <Route path='/category'  element={<CategoryPage/>}/>
         <Route path='/search'  element={<SearchPage/>}/>
         <Route path='/cart'  element={<CartPage/>}/>
+        <Route path='/purchaseCheckout'  element={<PurchaseCheckout/>}/>
       </Routes>
     </BrowserRouter>
   </MainProvider>

@@ -1,0 +1,38 @@
+.checkout-body {
+  min-height: 100%;
+  width: 100%;
+}
+
+.checkout-container {
+  margin-top: 60px;
+  text-align: center;
+  min-height: 400px;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-container h3 {
+  font-size: 30px;
+  margin-top: 60px;
+}
+
+.checkout-container button {
+  padding: 10px 25px;
+  background-color: #2FC08C;
+  box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+  transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+
+.checkout-container button:hover {
+  cursor: pointer;
+  box-shadow: 6px 12px 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-3px);
+}
