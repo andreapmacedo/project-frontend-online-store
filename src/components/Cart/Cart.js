@@ -97,7 +97,7 @@ export default function Cart() {
     if(!cartItems.length){
       return (
         <div className="cart-empty">
-          <img src={ carrinhoVazio } alt="sacola-img" />
+          <img src={ carrinhoVazio } alt="carrinho-img" />
           <p className="title-cart">Seu carrinho está vazio!</p>
           <p className="subtitle-cart">Vá para a página inicial ou procure no site os produtos que vão te deixar feliz. Quando encontrá-los, clique no botão adicionar ao carrinho ;)</p>
         </div>
