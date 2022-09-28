@@ -29,6 +29,7 @@ const ItemDetails = () => {
         result = (cartItem.itemAmount);
       }
     });
+    // return result;
     amount = result;
   }
 
@@ -40,13 +41,6 @@ const ItemDetails = () => {
     }
     getItemDetails(id);
   }, [id]);
-
-  // useEffect(() => {
-  //   const serCategory = () => {
-  //     setCategorySelected([]);
-  //   }
-  //   serCategory();
-  // });
 
   return (
     <div className="main-page-container">
@@ -75,12 +69,15 @@ const ItemDetails = () => {
           <div className="btn-container">
             <AmountButton
             amount={ amount }
+            // amount={ getItemAmount() }
             itemId={ id }
             item={ { itemAmount: amount,  itemProduct: item} }
+            // item={ { itemAmount: getItemAmount(),  itemProduct: item} }
             />
           </div>
           {/* <h4>Quantidade: { amount }</h4> */}
           <h3>Total: R$ { (amount * item.price ).toFixed(2) } </h3>
+          {/* <h3>Total: R$ { (getItemAmount() * item.price ).toFixed(2) } </h3> */}
           <div className="buttons-container">
             <button
               className="back-button"
