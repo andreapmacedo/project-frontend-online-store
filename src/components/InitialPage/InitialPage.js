@@ -4,11 +4,12 @@ import blackFriday from '../../assets/black-friday2.webp';
 import { itemCategory } from '../../services/api';
 import CategoryCard from '../CategoryCard';
 import MainContext from '../../Context/MainContext'
-import { Info } from "phosphor-react";
+// import { Info } from "phosphor-react";
+import Loading from '../Loading/Loading';
 
 export default function InitialPage() {
-  let intervalID;
-  const [ teste, setTeste ] = useState([]);
+  // let intervalID;
+  const [ products, setProducts ] = useState([]);
 
   const {
     addToCart,
@@ -20,45 +21,45 @@ export default function InitialPage() {
     const joias = await itemCategory('MLB3937'); //Joias e relogios
     const informatica = await itemCategory('MLB1648'); //Informatica
     const items = [...celular.results.slice(0,4), ...joias.results.slice(0,4), ...informatica.results.slice(0,4)];
-    setTeste(items);
+    setProducts(items);
   }
 
   useEffect(() => {
     produtos();
   }, []);
 
-  function openDialog() {
-    const modal = document.querySelector('.modal');
-    modal.classList.add("active");
+  // function openDialog() {
+  //   const modal = document.querySelector('.modal');
+  //   modal.classList.add("active");
 
-    // O código abaixo lida com a barra de tempo de fechamento do dialog;
-    let barWidth = 100;
+  //   // O código abaixo lida com a barra de tempo de fechamento do dialog;
+  //   let barWidth = 100;
 
-    const animate = () => {
-      const progressBar = document.getElementById("bar");
-      barWidth--;
-      progressBar.style.width = `${barWidth}%`;
-    };
-    animate();
-    setTimeout(() => {
-      intervalID = setInterval(() => {
-        if (barWidth === 0) {
-          clearInterval(intervalID);
-          closeDialog();
-          barWidth = 100;
-        } else {
-          animate();
-        }
-      }, 35);
-    }, 500);
-  }
+  //   const animate = () => {
+  //     const progressBar = document.getElementById("bar");
+  //     barWidth--;
+  //     progressBar.style.width = `${barWidth}%`;
+  //   };
+  //   animate();
+  //   setTimeout(() => {
+  //     intervalID = setInterval(() => {
+  //       if (barWidth === 0) {
+  //         clearInterval(intervalID);
+  //         closeDialog();
+  //         barWidth = 100;
+  //       } else {
+  //         animate();
+  //       }
+  //     }, 35);
+  //   }, 500);
+  // }
   
   // Função responsável por fechar o dialog de alerta
-  function closeDialog() {
-    const modal = document.querySelector('.modal');
-    modal.classList.remove("active");
-    clearInterval(intervalID);
-  }
+  // function closeDialog() {
+  //   const modal = document.querySelector('.modal');
+  //   modal.classList.remove("active");
+  //   clearInterval(intervalID);
+  // }
 
   function getCartItemQuantity(item) {
     let quantity = 0;
@@ -75,7 +76,7 @@ export default function InitialPage() {
     if (quantity < item.available_quantity) {    
       addToCart(item);
     } else {
-      openDialog();
+      // openDialog();
     }
   }
 
@@ -88,8 +89,8 @@ export default function InitialPage() {
       <div className="destaques">
         <h2>Produtos em destaque</h2>
         <div className="produtos-destaque">
-        { teste?.length > 0 && (
-          teste.map((product) => (
+        { products?.length > 0 ? (
+          products.map((product) => (
             <CategoryCard
             productId={ product.id }
             title={ product.title }
@@ -100,11 +101,11 @@ export default function InitialPage() {
             shipping={ product.shipping.free_shipping }
           />
           ))
-        )}
+        ) : <Loading /> }
         </div>
       </div>
     </div>
-    <div className="modal"  onClick={ closeDialog } >
+    {/* <div className="modal"  onClick={ closeDialog } >
         <div className="modal-content">
           <span className="close" onClick={ closeDialog }>&times;</span>
             <div className="message">
@@ -115,7 +116,7 @@ export default function InitialPage() {
               <div id="bar"></div>
             </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
