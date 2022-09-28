@@ -41,12 +41,12 @@ const ItemDetails = () => {
     getItemDetails(id);
   }, [id]);
 
-  useEffect(() => {
-    const serCategory = () => {
-      setCategorySelected([]);
-    }
-    serCategory();
-  });
+  // useEffect(() => {
+  //   const serCategory = () => {
+  //     setCategorySelected([]);
+  //   }
+  //   serCategory();
+  // });
 
   return (
     <div className="main-page-container">
@@ -69,8 +69,8 @@ const ItemDetails = () => {
           </div>
           <img src={ item.thumbnail } alt={ item.title } />
           <h4>
-            {/* Preço: R$ { (item.price).toFixed(2) } */}
-            Preço: R$ { (item.price) }
+            Preço: R$ { (1 * item.price).toFixed(2) }
+            {/* Preço: R$ { (item.price) } */}
           </h4>
           <div className="btn-container">
             <AmountButton
