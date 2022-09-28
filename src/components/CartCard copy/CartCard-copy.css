@@ -27,15 +27,6 @@
   position: absolute;
 }
 
-.cart-card .trash-icon {
-  top: 12px;
-  right: 12px;
-  position: absolute;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
 
 .card-cart .card-link {
   display: flex;
@@ -110,14 +101,4 @@
 .cart-card .info-content .price-container .price {
   font-size: 1.1em;
   font-weight: bolder;
-}
-
-.price-container .price-left {
-  display: flex;
-  flex-direction: column;
-}
-
-.price-container .price-right {
-  display: flex;
-  flex-direction: column;
 }

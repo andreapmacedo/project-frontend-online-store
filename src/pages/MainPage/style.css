@@ -1,21 +1,24 @@
 .main-page-container{
   /* background-color: red; */
+  background-color: rgb(232, 230, 230);
 }
 
 .main-top-menu-container{
-  background-color: aqua;
+  /* background-color: aqua; */
+  background-color: rgb(232, 230, 230);
 }
 
 .main-body-container{
   /* background-color: yellow; */
   display: flex;
+  background-color: rgb(232, 230, 230);
 }
 
 .main-body-side-menu{
-  /* background-color: purple; */
   background-color: #E8E6E6;
   max-width: 20%;
   max-width: 300px;
+  background-color: rgb(232, 230, 230);
 }
 
 .main-body-cards{
@@ -23,5 +26,6 @@
   /* display: flex;
   flex-wrap: wrap; */
   background-color: #E8E6E6;
+  background-color: rgb(232, 230, 230);
   width: 100%;
 }

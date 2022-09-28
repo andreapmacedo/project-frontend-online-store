@@ -28,12 +28,19 @@ class CategoryCard extends Component {
             <div className="title-content">
               <p>{title}</p>
             </div>
-            <div className="price-content">
-              <p class="original-price">{ (originalPrice && (originalPrice !== price)) && `R$ ${ originalPrice.toFixed(2).replace('.', ',') }` }</p>
-              <p className="price">
-                {' '}
-                { `R$ ${price.toFixed(2).replace('.', ',')}` }
-              </p>
+            <div className="price-container">
+              <div className="price-left">
+                {/* <p>de:</p>   */}
+                <p class="original-price">{ (originalPrice && (originalPrice !== price)) && `R$ ${ originalPrice.toFixed(2).replace('.', ',') }` }</p>
+
+              </div>
+              <div className="price-right">
+                {/* <p>por:</p> */}
+                <p className="price">
+                  {/* {' '} */}
+                  { `R$ ${price.toFixed(2).replace('.', ',')}` }
+                </p>
+              </div>
             </div>
           </div>
           

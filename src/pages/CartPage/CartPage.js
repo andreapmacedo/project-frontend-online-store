@@ -1,5 +1,5 @@
 import React from 'react';
-import BotaoVoltar from '../../components/BotaoVoltar';
+
 import TopMenu from '../../components/TopMenu';
 import SideMenu from '../../components/SideMenu';
 // import CategoriesCards from '../../components/CategoriesCards';
@@ -19,7 +19,7 @@ const CartPage = () => (
         <Cart></Cart>
       </div>
     </div>
-    <BotaoVoltar />
+
   </div>
 );
 

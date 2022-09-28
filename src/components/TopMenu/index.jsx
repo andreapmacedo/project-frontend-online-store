@@ -27,7 +27,7 @@ const TopMenu = () => {
       <div className="top-menu-container" 
       >
         <div onClick={ () => navigate('/') } className="cart-logo">
-          <h1>Shopping Cart</h1>
+          <h1>Online Store</h1>
         </div>
         {(location.pathname === '/category' || location.pathname === '/search') &&
           <div className="search-bar">
