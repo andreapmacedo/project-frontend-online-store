@@ -9,6 +9,7 @@
   max-width: 800px;
   margin-top: 20px;
   /* padding: 0 20px; */
+  background-color: rgb(232, 230, 230);
 }
 
 .main-cart-cards-container{
@@ -50,6 +51,7 @@
 
 .subtotal-container {
   margin-top: 25px;
+  margin-bottom: 25px;
   padding: 22px;
   /* background-color: #eee; */
   display: flex;

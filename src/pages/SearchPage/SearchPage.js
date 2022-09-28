@@ -1,5 +1,4 @@
 import React from 'react';
-import BotaoVoltar from '../../components/BotaoVoltar';
 import TopMenu from '../../components/TopMenu';
 import SideMenu from '../../components/SideMenu';
 // import CategoriesCards from '../../components/CategoriesCards';
@@ -19,7 +18,7 @@ const SearchPage = () => (
         <SearchCards></SearchCards>
       </div>
     </div>
-    <BotaoVoltar />
+    
   </div>
 );
 

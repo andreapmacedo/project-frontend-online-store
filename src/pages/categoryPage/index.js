@@ -1,5 +1,4 @@
 import React from 'react';
-import BotaoVoltar from '../../components/BotaoVoltar';
 import TopMenu from '../../components/TopMenu';
 import SideMenu from '../../components/SideMenu';
 import CategoriesCards from '../../components/CategoriesCards';
@@ -18,7 +17,6 @@ const CategoryPage = () => (
         <CategoriesCards></CategoriesCards>
       </div>
     </div>
-    <BotaoVoltar />
   </div>
 );
 

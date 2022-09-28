@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import BotaoVoltar from '../BotaoVoltar';
 // import { useHistory } from 'react-router-dom';
 
 // const history = useHistory();

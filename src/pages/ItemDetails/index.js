@@ -12,6 +12,7 @@ const ItemDetails = () => {
   let amount = 0;
   const {
     cartItems,
+    setCategorySelected,
   } = useContext(MainContext);
 
   const [item, setItem] = useState({});
@@ -32,9 +33,17 @@ const ItemDetails = () => {
     const getItemDetails = async(selectedItemId) => {
       const details = await itemDetails(id);
       setItem(details);
+      setCategorySelected([]);
     }
     getItemDetails(id);
   }, [id]);
+
+  useEffect(() => {
+    const serCategory = () => {
+      setCategorySelected([]);
+    }
+    serCategory();
+  });
 
   return (
     <div className="main-page-container">

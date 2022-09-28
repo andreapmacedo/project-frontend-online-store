@@ -45,17 +45,18 @@
 }
 
 .item-details-title {
-  font-size: 1.2em;
+  width: 100%;
   background-color: #fafafa;
   /* font-weight: 600; */
   border-top: #2FC08C solid 1px;
   border-bottom: #2FC08C solid 1px;
+  
 }
 
 .item-details-title h1{
-
+  font-size: 1em;
   margin: 0 20px;
-
+  color: #777;
 }
 
 .item-details > img {

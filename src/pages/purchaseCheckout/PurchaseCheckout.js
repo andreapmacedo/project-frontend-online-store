@@ -1,4 +1,3 @@
-import BotaoVoltar from '../../components/BotaoVoltar';
 import TopMenu from '../../components/TopMenu';
 import SideMenu from '../../components/SideMenu';
 import './style.css';
@@ -23,12 +22,12 @@ export default function PurchaseCheckout() {
               <button
                 type="button"
               >
-                Voltar às compras
+                Voltar aos produtos
               </button>
             </Link>
           </div>
         </section>
       </div>
-      <BotaoVoltar />
+      
     </div>)
 }
