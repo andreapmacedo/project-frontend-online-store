@@ -27,6 +27,15 @@
   position: absolute;
 }
 
+.cart-card .trash-icon {
+  top: 12px;
+  right: 12px;
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 
 .card-cart .card-link {
   display: flex;

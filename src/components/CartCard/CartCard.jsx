@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import AmountButton from '../AmountButton/AmountButton';
 import MainContext from '../../Context/MainContext';
+import { Trash } from 'phosphor-react';
 
 import './CartCard.css';
 
@@ -11,6 +12,7 @@ const CartCard = (props) => {
   const { productId, thumbnail, title, price, onClick, shipping, item } = props;
   const {
     cartItems,
+    deleteFromCart,
   } = useContext(MainContext);
 
   function getItemAmount() {
@@ -23,11 +25,27 @@ const CartCard = (props) => {
     return result;
   }
 
+  const deleteItem = (item) => {
+    console.log('deleteItem', item);
+      cartItems.forEach((cartItem) => {
+        if (cartItem.itemProduct.id === item.itemProduct.id) {
+          deleteFromCart(cartItem);
+        }
+      });
+    
+  }
+
   return (
     <div className="cart-card" >
         <div className="free-shipping-svg">
         { shipping && <img src={ freeShippingSvg } alt="Profile" /> }          
         </div>
+        <button className="trash-icon"
+          type="button"
+          onClick={ () => deleteItem(item) }
+        >
+          <Trash size={24} color="red" />
+        </button>
         <div 
           className="card-link"
         >
@@ -36,7 +54,6 @@ const CartCard = (props) => {
             src={ thumbnail }
             alt={ title }
           />
-          
           <div className="btn-container">
             <AmountButton
             amount={ getItemAmount() }

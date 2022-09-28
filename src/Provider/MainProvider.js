@@ -47,6 +47,25 @@ function MainProvider({ children }) {
 
   };
 
+  function deleteFromCart(item) {
+    console.log('item', item);
+    // if (cartItems[cartItems.indexOf(item)].itemAmount > 1) {
+    //   const updateProducts = cartItems.map((cartItem) => {
+    //     if (cartItem.itemProduct.id === item.itemProduct.id ) {
+    //       return ({
+    //         itemAmount: 0,
+    //         itemProduct: item.itemProduct,
+    //       })
+    //     } else return cartItem;
+    //   });
+    //   setCartItem(updateProducts);
+    // } else {
+    //   setCartItem(cartItems.filter((cartItem) => cartItem.itemProduct.id !== item.itemProduct.id));
+    // }    
+    setCartItem(cartItems.filter((cartItem) => cartItem.itemProduct.id !== item.itemProduct.id));
+
+  };
+
   const context = {
     selectedListItems,
     setSelectedListItems,
@@ -56,6 +75,7 @@ function MainProvider({ children }) {
     setCartItem,
     addToCart,
     removeFromCart,
+    deleteFromCart,
     btnStatus,
     setBtnStatus,
     categorySelected,

@@ -93,7 +93,7 @@ export default function CategoriesCards() {
         } else {
           animate();
         }
-      }, 35);
+      }, 30);
     }, 500);
   }
   

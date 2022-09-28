@@ -25,7 +25,6 @@ export default function Cart() {
 
 
   function renderSubTotalSection(){    
-    
       return (
         <div className="subtotal-container">
           <div className="subtotal-text">
@@ -44,8 +43,8 @@ export default function Cart() {
           </div>
           
           <div className="subtotal-button">
-            <div
-              // type="button"
+            <button
+              type="button"
               className={cartItems.length ? "button-green" : "button-disabled"}
               // onClick={() => navigate('/purchaseCheckout')}
               onClick={ purchaseCheckout }
@@ -57,11 +56,11 @@ export default function Cart() {
               <div className="text">
                 FINALIZAR COMPRA
               </div>
-            </div>
-            <div
+            </button>
+            <button
+              type="button"
               className={cartItems.length ? "button-red" : "button-disabled"}
-              // onClick={() => navigate('/purchaseCheckout')}
-              onClick={ purchaseCheckout }
+              onClick={ () => setCartItem([]) }
               {...(cartItems.length === 0 && { disabled: true })}
             >
               <div className="icon" >
@@ -71,7 +70,7 @@ export default function Cart() {
               <div className="text">
                 REMOVER TODOS OS PRODUTOS
               </div>  
-            </div>
+            </button>
           </div>
         </div>
       )
@@ -90,6 +89,9 @@ export default function Cart() {
     }
     setSubtotall();
   }, [cartItems]);
+
+ 
+  //-----------------------RENDERIZAÇÃO DO COMPONENTE-----------------------
 
   function renderItems(){    
     if(!cartItems.length){

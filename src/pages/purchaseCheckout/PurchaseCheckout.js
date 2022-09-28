@@ -23,7 +23,7 @@ export default function PurchaseCheckout() {
               <button
                 type="button"
               >
-                Ver mais produtos
+                Voltar às compras
               </button>
             </Link>
           </div>
