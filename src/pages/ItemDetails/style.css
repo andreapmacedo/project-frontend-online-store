@@ -69,3 +69,48 @@
   color: #777;
   /* color: #2FC08C; */
 }
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* border: #2FC08C solid 1px; */
+}
+
+.back-button {
+  border: none;
+  width: 120px;
+  height: 30px;
+  background-color: #fff;
+  border: #2FC08C solid 1px;
+  border-radius: 5px;
+  margin: 0 20px;
+  font-size: 0.8em;
+  color: #777;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+}
+
+.buttons-container .go-to-cart-button {
+  border: none;
+  width: 120px;
+  height: 30px;
+  background-color: #fff;
+  border: #2FC08C solid 1px;
+  border-radius: 5px;
+  margin: 0 20px;
+  font-size: 0.8em;
+  color: #777;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+}

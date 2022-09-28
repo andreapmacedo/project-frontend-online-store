@@ -1,5 +1,6 @@
 import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import MainContext from '../../Context/MainContext'
 import TopMenu from '../../components/TopMenu';
 import SideMenu from '../../components/SideMenu';
@@ -7,8 +8,10 @@ import './style.css';
 import { itemDetails } from '../../services/api';
 // import Review from '../../components/Review/Review';
 import AmountButton from '../../components/AmountButton copy/AmountButton';
+import { CaretLeft, ShoppingCart } from 'phosphor-react';
 
 const ItemDetails = () => {
+  const navigate = useNavigate();
   let amount = 0;
   const {
     cartItems,
@@ -66,7 +69,8 @@ const ItemDetails = () => {
           </div>
           <img src={ item.thumbnail } alt={ item.title } />
           <h4>
-            Preço: R$ { item.price }
+            {/* Preço: R$ { (item.price).toFixed(2) } */}
+            Preço: R$ { (item.price) }
           </h4>
           <div className="btn-container">
             <AmountButton
@@ -77,7 +81,22 @@ const ItemDetails = () => {
           </div>
           {/* <h4>Quantidade: { amount }</h4> */}
           <h3>Total: R$ { (amount * item.price ).toFixed(2) } </h3>
-
+          <div className="buttons-container">
+            <button
+              className="back-button"
+              onClick={ () => window.history.back() }
+            >
+              <CaretLeft size={18} color="#2FC08C" /> 
+              <p>VOLTAR</p>
+            </button>
+            <button
+              className="go-to-cart-button"
+              onClick={ () => navigate('/cart') }
+            >
+              <ShoppingCart size={18} color="#2FC08C" /> 
+              <p>CARRINHO</p>
+            </button>
+          </div>
 
         </div>
         {/* <Review /> */}
