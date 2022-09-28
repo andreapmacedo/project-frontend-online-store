@@ -17,7 +17,7 @@ export default function PurchaseCheckout() {
           <div className="checkout-container">
             <h3>Compra finalizada, agradecemos pela preferencia 🛒</h3>
             <Link
-              to="/main"
+              to="/"
             >
               <button
                 type="button"

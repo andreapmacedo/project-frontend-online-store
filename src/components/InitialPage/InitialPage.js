@@ -14,6 +14,7 @@ export default function InitialPage() {
   const {
     addToCart,
     cartItems,
+    setSelectedListItems
   } = useContext(MainContext);
 
   async function produtos() {
@@ -26,6 +27,7 @@ export default function InitialPage() {
 
   useEffect(() => {
     produtos();
+    setSelectedListItems([]);
   }, []);
 
   // function openDialog() {
