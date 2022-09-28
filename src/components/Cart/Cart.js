@@ -58,13 +58,13 @@ export default function Cart() {
 
             <button
               type="button"
-              className={cartItems.length ? "button-green" : "button-disabled"}
+              className={cartItems.length ? "button-white" : "button-disabled"}
               // onClick={() => navigate('/purchaseCheckout')}
               onClick={ purchaseCheckout }
               {...(cartItems.length === 0 && { disabled: true })}
             >
               <div className="icon" >
-              {cartItems.length ? <CreditCard size={24} color="#2FC08C" /> : <CreditCard size={24} color="#eee" />}
+              {cartItems.length ? <CreditCard size={24} color="#fff" /> : <CreditCard size={24} color="#eee" />}
               </div>
               <div className="text">
                 FINALIZAR COMPRA
@@ -87,7 +87,6 @@ export default function Cart() {
           </div>
         </div>
       )
-    
   }
   
   useEffect(() => {

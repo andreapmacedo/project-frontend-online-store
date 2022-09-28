@@ -147,6 +147,7 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
 .subtotal-container .button-red{
   font-family: 'Poppins', sans-serif;
   background-color: #fff;
@@ -156,6 +157,25 @@
   padding: 2px;
   width: 250px;
   border: red solid 1px;
+  padding: 5px 0;
+  margin: 5px 0; 
+  font-size: 0.8em;
+  font-weight: bolder;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.subtotal-container .button-white{
+  font-family: 'Poppins', sans-serif;
+  background-color: #2FC08C;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  padding: 2px;
+  width: 250px;
+  border: #2FC08C solid 1px;
   padding: 5px 0;
   margin: 5px 0; 
   font-size: 0.8em;
