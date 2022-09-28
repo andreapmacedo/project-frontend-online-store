@@ -6,7 +6,7 @@ import CartCard from '../CartCard/CartCard';
 // import { ShoppingCart } from 'phosphor-react';
 import carrinhoVazio from '../../assets/carrinhoVazio.svg';
 import { useNavigate } from 'react-router-dom';
-import { Trash, CreditCard } from 'phosphor-react';
+import { Trash, CreditCard, ShoppingCart } from 'phosphor-react';
 
 
 export default function Cart() {
@@ -43,6 +43,19 @@ export default function Cart() {
           </div>
           
           <div className="subtotal-button">
+            <button
+              type="button"
+              className="button-green"
+              onClick={ () => navigate('/category') }
+            >
+              <div className="icon" >
+              <ShoppingCart size={24} color="#2FC08C" />
+              </div>  
+              <div className="text">
+                VOLTAR PARA A LOJA
+              </div>  
+            </button>
+
             <button
               type="button"
               className={cartItems.length ? "button-green" : "button-disabled"}

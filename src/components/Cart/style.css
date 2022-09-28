@@ -138,8 +138,8 @@
   padding: 2px;
   width: 250px;
   border: #2FC08C solid 1px;
-  padding: 10px 0;
-  margin: 10px 0; 
+  padding: 5px 0;
+  margin: 5px 0; 
   font-size: 0.8em;
   font-weight: bolder;
   cursor: pointer;
@@ -156,8 +156,8 @@
   padding: 2px;
   width: 250px;
   border: red solid 1px;
-  padding: 10px 0;
-  margin: 10px 0; 
+  padding: 5px 0;
+  margin: 5px 0; 
   font-size: 0.8em;
   font-weight: bolder;
   cursor: pointer;
@@ -175,8 +175,8 @@
   border-radius: 4px;
   padding: 2px;
   width: 250px;
-  padding: 10px 0;
-  margin: 10px 0; 
+  padding: 5px 0;
+  margin: 5px 0; 
   font-size: 0.7em;
   font-weight: bolder;
   cursor: pointer;

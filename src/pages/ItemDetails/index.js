@@ -7,7 +7,7 @@ import SideMenu from '../../components/SideMenu';
 import './style.css';
 import { itemDetails } from '../../services/api';
 // import Review from '../../components/Review/Review';
-import AmountButton from '../../components/AmountButton copy/AmountButton';
+import AmountButton from '../../components/AmountButton/AmountButton';
 import { CaretLeft, ShoppingCart } from 'phosphor-react';
 
 const ItemDetails = () => {
