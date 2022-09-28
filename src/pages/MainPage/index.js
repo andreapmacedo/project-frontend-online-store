@@ -4,6 +4,7 @@ import TopMenu from '../../components/TopMenu';
 import SideMenu from '../../components/SideMenu';
 // import MainCards from '../../components/CardsContainer';
 import CategoriesCards from '../../components/CategoriesCards';
+import InitialPage from '../../components/InitialPage/InitialPage';
 import './style.css';
 
 const Main = () => (
@@ -16,11 +17,14 @@ const Main = () => (
         <SideMenu></SideMenu>
       </div>
       <div className="main-body-cards">
-        {/* <MainCards></MainCards> */}
-        <CategoriesCards></CategoriesCards>
+        {/* <MainCards></MainCards> */} 
+        <CategoriesCards />
+        <InitialPage />
       </div>
     </div>
+    
     <BotaoVoltar />
+    
   </div>
 );
 
