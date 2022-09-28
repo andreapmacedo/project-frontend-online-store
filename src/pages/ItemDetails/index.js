@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import MainContext from '../../Context/MainContext'
 import TopMenu from '../../components/TopMenu';
 import SideMenu from '../../components/SideMenu';
-import './ItemDetails.css';
+import './style.css';
 import { itemDetails } from '../../services/api';
 // import Review from '../../components/Review/Review';
 import AmountButton from '../../components/AmountButton copy/AmountButton';
